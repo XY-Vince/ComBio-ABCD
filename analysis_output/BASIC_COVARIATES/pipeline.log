@@ -1,0 +1,327 @@
+2025-11-12 18:52:23,355 - __main__ - INFO - ================================================================================
+2025-11-12 18:52:23,355 - __main__ - INFO - ADHD DIGITAL PHENOTYPE ANALYSIS PIPELINE
+2025-11-12 18:52:23,355 - __main__ - INFO - Started at: 2025-11-12 18:52:23
+2025-11-12 18:52:23,355 - __main__ - INFO - ================================================================================
+2025-11-12 18:52:23,355 - __main__ - INFO - 
+================================================================================
+2025-11-12 18:52:23,355 - __main__ - INFO - PHASE 0: DATA LOADING AND PREPARATION
+2025-11-12 18:52:23,355 - __main__ - INFO - ================================================================================
+2025-11-12 18:52:23,355 - data_loader - INFO - ================================================================================
+2025-11-12 18:52:23,355 - data_loader - INFO - Starting data loading and preparation
+2025-11-12 18:52:23,355 - data_loader - INFO - ================================================================================
+2025-11-12 18:52:23,355 - data_loader - INFO - Loading Fitbit data from /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/source_files/fitbit_data.xlsx
+2025-11-12 18:52:23,501 - data_loader - INFO - Found 14 sheets in file: ['NC_Controls', 'ADHD_preprocessed', 'ADHD_Unmedicated', 'ADHD_Stimulants', 'ADHD_NonStimulants', 'ABCD_Methylphenidate_only', 'ADHD_Amphetamine_Only', 'ADHD_Lisdexamfetamine_Only', 'ADHD_Guanfacine_Only', 'ADHD_Atomoxetine_Only', 'ADHD_Dexmethylphenidate_Only', 'HR_explained', 'ADHD_OLD', 'ADHD_Medicated_OLD']
+2025-11-12 18:52:23,501 - data_loader - INFO - Loading ONLY specified sheets: ['NC_Controls', 'ADHD_Unmedicated', 'ADHD_Stimulants']
+2025-11-12 18:52:23,501 - data_loader - INFO - Loading sheet: NC_Controls
+2025-11-12 18:52:25,159 - data_loader - INFO -   ✓ Assigned to Healthy Control: 2238 subjects
+2025-11-12 18:52:25,159 - data_loader - INFO - Loading sheet: ADHD_Unmedicated
+2025-11-12 18:52:25,278 - data_loader - INFO -   ✓ Assigned to ADHD Unmedicated: 142 subjects
+2025-11-12 18:52:25,278 - data_loader - INFO - Loading sheet: ADHD_Stimulants
+2025-11-12 18:52:25,392 - data_loader - INFO -   ✓ Assigned to ADHD Stimulant: 107 subjects
+2025-11-12 18:52:25,398 - data_loader - INFO - Successfully loaded 2487 total rows from 3 sheets
+2025-11-12 18:52:25,399 - data_loader - INFO - ============================================================
+2025-11-12 18:52:25,399 - data_loader - INFO - FINAL GROUP DISTRIBUTION:
+2025-11-12 18:52:25,399 - data_loader - INFO - ============================================================
+2025-11-12 18:52:25,399 - data_loader - INFO -   Healthy Control: 2238 subjects
+2025-11-12 18:52:25,399 - data_loader - INFO -   ADHD Unmedicated: 142 subjects
+2025-11-12 18:52:25,399 - data_loader - INFO -   ADHD Stimulant: 107 subjects
+2025-11-12 18:52:25,399 - data_loader - INFO - ============================================================
+2025-11-12 18:52:25,399 - data_loader - INFO - Loading metadata from /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/source_files/ABCD_metadata_features_07232022.csv
+2025-11-12 18:52:25,428 - data_loader - INFO - Successfully loaded 2270 metadata records
+2025-11-12 18:52:25,428 - data_loader - INFO - Available covariates: ['sex', 'interview_age']
+2025-11-12 18:52:25,430 - data_loader - INFO - Metadata prepared: 2270 unique subjects with 2 covariates
+2025-11-12 18:52:25,430 - data_loader - INFO - Preparing merged dataset
+2025-11-12 18:52:25,431 - data_loader - INFO - Merging with metadata covariates...
+2025-11-12 18:52:25,434 - data_loader - INFO -   sex: 1309/2487 (52.6%) available
+2025-11-12 18:52:25,434 - data_loader - INFO -   interview_age: 1309/2487 (52.6%) available
+2025-11-12 18:52:25,434 - data_loader - INFO - Final analysis group distribution:
+2025-11-12 18:52:25,434 - data_loader - INFO -   Healthy Control: 2238
+2025-11-12 18:52:25,434 - data_loader - INFO -   ADHD Unmedicated: 142
+2025-11-12 18:52:25,434 - data_loader - INFO -   ADHD Stimulant: 107
+2025-11-12 18:52:25,434 - utils - INFO - Handling missing values using method: drop
+2025-11-12 18:52:25,436 - utils - INFO - Dropped 1178 rows with missing values. Remaining: 1309
+2025-11-12 18:52:25,436 - data_loader - INFO - Found 125 available Fitbit features from config list
+2025-11-12 18:52:25,436 - data_loader - INFO - Converting features to numeric type...
+2025-11-12 18:52:25,442 - data_loader - INFO - Feature type conversion complete
+2025-11-12 18:52:25,442 - utils - INFO - Performing data quality checks...
+2025-11-12 18:52:25,492 - utils - INFO - Data quality check complete. Total subjects: 1309
+2025-11-12 18:52:25,492 - utils - INFO - Features with high missing rate: 0
+2025-11-12 18:52:25,492 - data_loader - INFO - ================================================================================
+2025-11-12 18:52:25,492 - data_loader - INFO - Data preparation complete. Final dataset: 1309 subjects
+2025-11-12 18:52:25,492 - data_loader - INFO - ================================================================================
+2025-11-12 18:52:25,492 - __main__ - INFO - Loaded dataset: 1309 subjects, 125 features
+2025-11-12 18:52:25,493 - __main__ - INFO - Found 3 groups for analysis
+2025-11-12 18:52:25,493 - utils - INFO - Performing data quality checks...
+2025-11-12 18:52:25,541 - utils - INFO - Data quality check complete. Total subjects: 1309
+2025-11-12 18:52:25,541 - utils - INFO - Features with high missing rate: 0
+2025-11-12 18:52:25,541 - residualization - INFO - ================================================================================
+2025-11-12 18:52:25,541 - residualization - INFO - PHASE 1: RESIDUALIZATION - Removing Covariate Effects
+2025-11-12 18:52:25,541 - residualization - INFO - ================================================================================
+2025-11-12 18:52:25,541 - residualization - INFO - Preparing covariates for residualization...
+2025-11-12 18:52:25,541 - data_loader - INFO - Preparing covariates
+2025-11-12 18:52:25,542 - data_loader - INFO - Converting sex to dummy variables
+2025-11-12 18:52:25,543 - residualization - INFO - Re-validating numeric types on prepared data...
+2025-11-12 18:52:25,556 - residualization - INFO - Type conversion: 125 success, 0 failures
+2025-11-12 18:52:25,556 - residualization - INFO - Verifying dtypes after conversion:
+2025-11-12 18:52:25,556 - residualization - INFO -   avg_hr_deep_mean: dtype=float64, is_numeric=True
+2025-11-12 18:52:25,556 - residualization - INFO -   avg_hr_rem_mean: dtype=float64, is_numeric=True
+2025-11-12 18:52:25,556 - residualization - INFO -   first_inbed_minutes_min: dtype=float64, is_numeric=True
+2025-11-12 18:52:25,558 - residualization - INFO - Using 1171 healthy controls for regression models
+2025-11-12 18:52:25,558 - residualization - INFO - Using 2 covariate columns: ['interview_age', 'sex_M']
+2025-11-12 18:52:25,559 - residualization - INFO - Residualizing 125 features...
+2025-11-12 18:52:25,669 - residualization - INFO - Progress: 50/125 features processed
+2025-11-12 18:52:25,779 - residualization - INFO - Progress: 100/125 features processed
+2025-11-12 18:52:25,839 - residualization - INFO - ================================================================================
+2025-11-12 18:52:25,839 - residualization - INFO - Residualization complete:
+2025-11-12 18:52:25,839 - residualization - INFO -   Successful: 125 features
+2025-11-12 18:52:25,839 - residualization - INFO -   Failed: 0 features
+2025-11-12 18:52:25,839 - residualization - INFO - ================================================================================
+2025-11-12 18:52:25,841 - residualization - INFO - Residualization statistics saved to residualization_statistics.csv
+2025-11-12 18:52:25,842 - residualization - INFO - Validating residualization effectiveness...
+2025-11-12 18:52:25,844 - residualization - INFO - Validation results:
+2025-11-12 18:52:25,844 - residualization - INFO -   Mean |correlation| with interview_age before: 0.0913
+2025-11-12 18:52:25,844 - residualization - INFO -   Mean |correlation| with interview_age after: 0.0102
+2025-11-12 18:52:25,844 - residualization - INFO -   Reduction: 88.8%
+2025-11-12 18:52:25,936 - __main__ - INFO - Residualized data saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/residualized_data.csv
+2025-11-12 18:52:25,936 - __main__ - INFO - 
+================================================================================
+2025-11-12 18:52:25,936 - __main__ - INFO - PHASE 1.5: UNIVARIATE STATISTICAL TESTS
+2025-11-12 18:52:25,936 - __main__ - INFO - ================================================================================
+2025-11-12 18:52:25,936 - univariate_tests - INFO - ================================================================================
+2025-11-12 18:52:25,936 - univariate_tests - INFO - UNIVARIATE STATISTICAL TESTS
+2025-11-12 18:52:25,936 - univariate_tests - INFO - ================================================================================
+2025-11-12 18:52:25,936 - univariate_tests - INFO - 
+============================================================
+2025-11-12 18:52:25,936 - univariate_tests - INFO - Comparison: Healthy Control_vs_ADHD Unmedicated
+2025-11-12 18:52:25,936 - univariate_tests - INFO - ============================================================
+2025-11-12 18:52:25,936 - univariate_tests - INFO - Performing univariate tests: Group 0 vs Group 1
+2025-11-12 18:52:26,197 - univariate_tests - INFO - Significant features (t-test, q<0.05): 1/125
+2025-11-12 18:52:26,197 - univariate_tests - INFO - Significant features (Mann-Whitney, q<0.05): 0/125
+2025-11-12 18:52:26,197 - univariate_tests - INFO - 
+Top 10 features by |Cohen's d|:
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   total_step_median: d=-0.262 (small), q=0.9682
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   day_total_steps_no_el_sd: d=-0.262 (small), q=0.9682
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   total_step_sd: d=-0.258 (small), q=0.9682
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   day_total_steps_no_el_median: d=-0.253 (small), q=0.9682
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   fitbit_veryactivemin_mean: d=-0.203 (small), q=0.9682
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   total_very_active_min_mean: d=-0.201 (small), q=0.9682
+2025-11-12 18:52:26,197 - univariate_tests - INFO -   dayt_total_steps_mean: d=-0.200 (small), q=0.9682
+2025-11-12 18:52:26,198 - univariate_tests - INFO -   total_step_mean: d=-0.199 (negligible), q=0.9682
+2025-11-12 18:52:26,198 - univariate_tests - INFO -   wake_minutes_sd: d=-0.198 (negligible), q=0.9682
+2025-11-12 18:52:26,198 - univariate_tests - INFO -   total_ave_met_median: d=-0.192 (negligible), q=0.9682
+2025-11-12 18:52:26,199 - univariate_tests - INFO - Saved results to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/univariate_tests_Healthy Control_vs_ADHD Unmedicated.csv
+2025-11-12 18:52:26,199 - univariate_tests - INFO - 
+============================================================
+2025-11-12 18:52:26,199 - univariate_tests - INFO - Comparison: Healthy Control_vs_ADHD Stimulant
+2025-11-12 18:52:26,199 - univariate_tests - INFO - ============================================================
+2025-11-12 18:52:26,199 - univariate_tests - INFO - Performing univariate tests: Group 0 vs Group 2
+2025-11-12 18:52:26,471 - univariate_tests - INFO - Significant features (t-test, q<0.05): 27/125
+2025-11-12 18:52:26,471 - univariate_tests - INFO - Significant features (Mann-Whitney, q<0.05): 27/125
+2025-11-12 18:52:26,471 - univariate_tests - INFO - 
+Top 10 features by |Cohen's d|:
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_deep_median: d=-0.825 (large), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_deep_mean: d=-0.811 (large), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_light_min: d=-0.775 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   fitbit_restingheartrate_mean: d=-0.753 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_deep_min: d=-0.748 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_light_median: d=-0.728 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_rem_mean: d=-0.724 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_rem_median: d=-0.721 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_rem_min: d=-0.715 (medium), q=0.0000
+2025-11-12 18:52:26,472 - univariate_tests - INFO -   avg_hr_wake_min: d=-0.671 (medium), q=0.0000
+2025-11-12 18:52:26,473 - univariate_tests - INFO - Saved results to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/univariate_tests_Healthy Control_vs_ADHD Stimulant.csv
+2025-11-12 18:52:26,474 - univariate_tests - INFO - 
+============================================================
+2025-11-12 18:52:26,474 - univariate_tests - INFO - Comparison: ADHD Unmedicated_vs_ADHD Stimulant
+2025-11-12 18:52:26,474 - univariate_tests - INFO - ============================================================
+2025-11-12 18:52:26,474 - univariate_tests - INFO - Performing univariate tests: Group 1 vs Group 2
+2025-11-12 18:52:26,692 - univariate_tests - INFO - Significant features (t-test, q<0.05): 22/125
+2025-11-12 18:52:26,692 - univariate_tests - INFO - Significant features (Mann-Whitney, q<0.05): 27/125
+2025-11-12 18:52:26,692 - univariate_tests - INFO - 
+Top 10 features by |Cohen's d|:
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_deep_mean: d=-0.753 (medium), q=0.0013
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_deep_median: d=-0.742 (medium), q=0.0013
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   fitbit_restingheartrate_mean: d=-0.732 (medium), q=0.0013
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_deep_min: d=-0.723 (medium), q=0.0013
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_light_min: d=-0.711 (medium), q=0.0014
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_rem_min: d=-0.705 (medium), q=0.0016
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_light_median: d=-0.658 (medium), q=0.0029
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_deep_max: d=-0.657 (medium), q=0.0029
+2025-11-12 18:52:26,692 - univariate_tests - INFO -   avg_hr_rem_mean: d=-0.657 (medium), q=0.0029
+2025-11-12 18:52:26,693 - univariate_tests - INFO -   avg_hr_rem_median: d=-0.650 (medium), q=0.0030
+2025-11-12 18:52:26,694 - univariate_tests - INFO - Saved results to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/univariate_tests_ADHD Unmedicated_vs_ADHD Stimulant.csv
+2025-11-12 18:52:26,694 - univariate_tests - INFO - 
+================================================================================
+2025-11-12 18:52:26,694 - univariate_tests - INFO - UNIVARIATE TESTS COMPLETE
+2025-11-12 18:52:26,694 - univariate_tests - INFO - ================================================================================
+2025-11-12 18:52:26,694 - univariate_tests - INFO - Creating effect size summary...
+2025-11-12 18:52:26,696 - univariate_tests - INFO - Effect size summary saved to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/effect_size_summary.csv
+2025-11-12 18:52:26,696 - __main__ - INFO - 
+Running predictive models with 125 features
+2025-11-12 18:52:26,696 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:26,696 - predictive_models - INFO - PHASE 2: PREDICTIVE MODELING
+2025-11-12 18:52:26,696 - predictive_models - INFO - Comparing: Healthy Control vs ADHD Unmedicated
+2025-11-12 18:52:26,696 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:26,696 - predictive_models - INFO - Preparing data for comparison: Group 0 vs Group 1
+2025-11-12 18:52:26,700 - predictive_models - INFO - Data prepared: 1245 samples, 124 features
+2025-11-12 18:52:26,700 - predictive_models - INFO -   Group 0: 1171 samples
+2025-11-12 18:52:26,701 - predictive_models - INFO -   Group 1: 74 samples
+2025-11-12 18:52:26,701 - predictive_models - INFO - Class distribution: {0: 1171, 1: 74}
+2025-11-12 18:52:26,702 - predictive_models - INFO - Train set: 871 samples, Test set: 374 samples
+2025-11-12 18:52:26,702 - predictive_models - INFO - Training Logistic Regression model...
+2025-11-12 18:52:32,637 - predictive_models - INFO - Logistic Regression Results:
+2025-11-12 18:52:32,637 - predictive_models - INFO -   Accuracy: 0.7193
+2025-11-12 18:52:32,637 - predictive_models - INFO -   ROC-AUC: 0.6192
+2025-11-12 18:52:32,637 - predictive_models - INFO -   CV ROC-AUC: 0.4961 (+/- 0.0605)
+2025-11-12 18:52:32,637 - predictive_models - INFO -   Precision: 0.0971
+2025-11-12 18:52:32,637 - predictive_models - INFO -   Recall: 0.4545
+2025-11-12 18:52:32,637 - predictive_models - INFO -   F1-Score: 0.1600
+2025-11-12 18:52:32,637 - predictive_models - INFO - Training Random Forest model...
+2025-11-12 18:52:33,321 - predictive_models - INFO - Random Forest Results:
+2025-11-12 18:52:33,321 - predictive_models - INFO -   Accuracy: 0.9412
+2025-11-12 18:52:33,321 - predictive_models - INFO -   ROC-AUC: 0.5080
+2025-11-12 18:52:33,321 - predictive_models - INFO -   CV ROC-AUC: 0.4761 (+/- 0.0880)
+2025-11-12 18:52:33,321 - predictive_models - INFO -   Precision: 0.0000
+2025-11-12 18:52:33,321 - predictive_models - INFO -   Recall: 0.0000
+2025-11-12 18:52:33,321 - predictive_models - INFO -   F1-Score: 0.0000
+2025-11-12 18:52:33,321 - predictive_models - INFO - 
+================================================================================
+2025-11-12 18:52:33,321 - predictive_models - INFO - MODEL COMPARISON SUMMARY
+2025-11-12 18:52:33,322 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:33,322 - predictive_models - INFO - Metric               Logistic Reg    Random Forest  
+2025-11-12 18:52:33,322 - predictive_models - INFO - --------------------------------------------------------------------------------
+2025-11-12 18:52:33,322 - predictive_models - INFO - Accuracy             0.7193          0.9412         
+2025-11-12 18:52:33,322 - predictive_models - INFO - ROC-AUC              0.6192          0.5080         
+2025-11-12 18:52:33,322 - predictive_models - INFO - Precision            0.0971          0.0000         
+2025-11-12 18:52:33,322 - predictive_models - INFO - Recall               0.4545          0.0000         
+2025-11-12 18:52:33,322 - predictive_models - INFO - F1-Score             0.1600          0.0000         
+2025-11-12 18:52:33,322 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:33,322 - predictive_models - INFO - Creating visualization plots...
+2025-11-12 18:52:34,476 - predictive_models - INFO - Plots saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/model_Healthy Control_vs_ADHD Unmedicated_results.png
+2025-11-12 18:52:34,478 - __main__ - INFO - Results saved for comparison: Healthy Control_vs_ADHD Unmedicated
+2025-11-12 18:52:34,478 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:34,478 - predictive_models - INFO - PHASE 2: PREDICTIVE MODELING
+2025-11-12 18:52:34,478 - predictive_models - INFO - Comparing: Healthy Control vs ADHD Stimulant
+2025-11-12 18:52:34,478 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:34,478 - predictive_models - INFO - Preparing data for comparison: Group 0 vs Group 2
+2025-11-12 18:52:34,482 - predictive_models - INFO - Data prepared: 1235 samples, 125 features
+2025-11-12 18:52:34,482 - predictive_models - INFO -   Group 0: 1171 samples
+2025-11-12 18:52:34,482 - predictive_models - INFO -   Group 2: 64 samples
+2025-11-12 18:52:34,482 - predictive_models - INFO - Class distribution: {0: 1171, 1: 64}
+2025-11-12 18:52:34,483 - predictive_models - INFO - Train set: 864 samples, Test set: 371 samples
+2025-11-12 18:52:34,483 - predictive_models - INFO - Training Logistic Regression model...
+2025-11-12 18:52:38,475 - predictive_models - INFO - Logistic Regression Results:
+2025-11-12 18:52:38,475 - predictive_models - INFO -   Accuracy: 0.8410
+2025-11-12 18:52:38,475 - predictive_models - INFO -   ROC-AUC: 0.6491
+2025-11-12 18:52:38,475 - predictive_models - INFO -   CV ROC-AUC: 0.6659 (+/- 0.0710)
+2025-11-12 18:52:38,475 - predictive_models - INFO -   Precision: 0.1296
+2025-11-12 18:52:38,475 - predictive_models - INFO -   Recall: 0.3684
+2025-11-12 18:52:38,475 - predictive_models - INFO -   F1-Score: 0.1918
+2025-11-12 18:52:38,476 - predictive_models - INFO - Training Random Forest model...
+2025-11-12 18:52:39,091 - predictive_models - INFO - Random Forest Results:
+2025-11-12 18:52:39,091 - predictive_models - INFO -   Accuracy: 0.9191
+2025-11-12 18:52:39,091 - predictive_models - INFO -   ROC-AUC: 0.6742
+2025-11-12 18:52:39,091 - predictive_models - INFO -   CV ROC-AUC: 0.7224 (+/- 0.0418)
+2025-11-12 18:52:39,091 - predictive_models - INFO -   Precision: 0.0000
+2025-11-12 18:52:39,091 - predictive_models - INFO -   Recall: 0.0000
+2025-11-12 18:52:39,091 - predictive_models - INFO -   F1-Score: 0.0000
+2025-11-12 18:52:39,091 - predictive_models - INFO - 
+================================================================================
+2025-11-12 18:52:39,091 - predictive_models - INFO - MODEL COMPARISON SUMMARY
+2025-11-12 18:52:39,091 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:39,091 - predictive_models - INFO - Metric               Logistic Reg    Random Forest  
+2025-11-12 18:52:39,091 - predictive_models - INFO - --------------------------------------------------------------------------------
+2025-11-12 18:52:39,091 - predictive_models - INFO - Accuracy             0.8410          0.9191         
+2025-11-12 18:52:39,091 - predictive_models - INFO - ROC-AUC              0.6491          0.6742         
+2025-11-12 18:52:39,091 - predictive_models - INFO - Precision            0.1296          0.0000         
+2025-11-12 18:52:39,091 - predictive_models - INFO - Recall               0.3684          0.0000         
+2025-11-12 18:52:39,091 - predictive_models - INFO - F1-Score             0.1918          0.0000         
+2025-11-12 18:52:39,091 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:39,091 - predictive_models - INFO - Creating visualization plots...
+2025-11-12 18:52:40,129 - predictive_models - INFO - Plots saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/model_Healthy Control_vs_ADHD Stimulant_results.png
+2025-11-12 18:52:40,131 - __main__ - INFO - Results saved for comparison: Healthy Control_vs_ADHD Stimulant
+2025-11-12 18:52:40,131 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:40,131 - predictive_models - INFO - PHASE 2: PREDICTIVE MODELING
+2025-11-12 18:52:40,131 - predictive_models - INFO - Comparing: ADHD Unmedicated vs ADHD Stimulant
+2025-11-12 18:52:40,131 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:40,131 - predictive_models - INFO - Preparing data for comparison: Group 1 vs Group 2
+2025-11-12 18:52:40,134 - predictive_models - INFO - Data prepared: 138 samples, 125 features
+2025-11-12 18:52:40,134 - predictive_models - INFO -   Group 1: 74 samples
+2025-11-12 18:52:40,134 - predictive_models - INFO -   Group 2: 64 samples
+2025-11-12 18:52:40,134 - predictive_models - INFO - Class distribution: {0: 74, 1: 64}
+2025-11-12 18:52:40,135 - predictive_models - INFO - Train set: 96 samples, Test set: 42 samples
+2025-11-12 18:52:40,135 - predictive_models - INFO - Training Logistic Regression model...
+2025-11-12 18:52:40,488 - predictive_models - INFO - Logistic Regression Results:
+2025-11-12 18:52:40,488 - predictive_models - INFO -   Accuracy: 0.5714
+2025-11-12 18:52:40,488 - predictive_models - INFO -   ROC-AUC: 0.7277
+2025-11-12 18:52:40,488 - predictive_models - INFO -   CV ROC-AUC: 0.6798 (+/- 0.1216)
+2025-11-12 18:52:40,488 - predictive_models - INFO -   Precision: 0.5333
+2025-11-12 18:52:40,488 - predictive_models - INFO -   Recall: 0.4211
+2025-11-12 18:52:40,488 - predictive_models - INFO -   F1-Score: 0.4706
+2025-11-12 18:52:40,488 - predictive_models - INFO - Training Random Forest model...
+2025-11-12 18:52:40,971 - predictive_models - INFO - Random Forest Results:
+2025-11-12 18:52:40,971 - predictive_models - INFO -   Accuracy: 0.7143
+2025-11-12 18:52:40,971 - predictive_models - INFO -   ROC-AUC: 0.7094
+2025-11-12 18:52:40,971 - predictive_models - INFO -   CV ROC-AUC: 0.6861 (+/- 0.0796)
+2025-11-12 18:52:40,971 - predictive_models - INFO -   Precision: 0.7059
+2025-11-12 18:52:40,971 - predictive_models - INFO -   Recall: 0.6316
+2025-11-12 18:52:40,971 - predictive_models - INFO -   F1-Score: 0.6667
+2025-11-12 18:52:40,971 - predictive_models - INFO - 
+================================================================================
+2025-11-12 18:52:40,971 - predictive_models - INFO - MODEL COMPARISON SUMMARY
+2025-11-12 18:52:40,971 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:40,972 - predictive_models - INFO - Metric               Logistic Reg    Random Forest  
+2025-11-12 18:52:40,972 - predictive_models - INFO - --------------------------------------------------------------------------------
+2025-11-12 18:52:40,972 - predictive_models - INFO - Accuracy             0.5714          0.7143         
+2025-11-12 18:52:40,972 - predictive_models - INFO - ROC-AUC              0.7277          0.7094         
+2025-11-12 18:52:40,972 - predictive_models - INFO - Precision            0.5333          0.7059         
+2025-11-12 18:52:40,972 - predictive_models - INFO - Recall               0.4211          0.6316         
+2025-11-12 18:52:40,972 - predictive_models - INFO - F1-Score             0.4706          0.6667         
+2025-11-12 18:52:40,972 - predictive_models - INFO - ================================================================================
+2025-11-12 18:52:40,972 - predictive_models - INFO - Creating visualization plots...
+2025-11-12 18:52:41,967 - predictive_models - INFO - Plots saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/model_ADHD Unmedicated_vs_ADHD Stimulant_results.png
+2025-11-12 18:52:41,969 - __main__ - INFO - Results saved for comparison: ADHD Unmedicated_vs_ADHD Stimulant
+2025-11-12 18:52:41,969 - visualization - INFO - ================================================================================
+2025-11-12 18:52:41,969 - visualization - INFO - PHASE 3: PCA ANALYSIS - Visualizing Digital Phenotypes
+2025-11-12 18:52:41,969 - visualization - INFO - ================================================================================
+2025-11-12 18:52:41,969 - visualization - INFO - Performing PCA with 10 components...
+2025-11-12 18:52:41,978 - visualization - INFO - PCA Results:
+2025-11-12 18:52:41,978 - visualization - INFO -   PC1: 0.1573 variance (0.1573 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC2: 0.1224 variance (0.2796 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC3: 0.1021 variance (0.3817 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC4: 0.0863 variance (0.4680 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC5: 0.0545 variance (0.5225 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC6: 0.0426 variance (0.5651 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC7: 0.0401 variance (0.6052 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC8: 0.0301 variance (0.6352 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC9: 0.0285 variance (0.6637 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO -   PC10: 0.0250 variance (0.6887 cumulative)
+2025-11-12 18:52:41,978 - visualization - INFO - Creating scree plot...
+2025-11-12 18:52:42,220 - visualization - INFO - Scree plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_scree_plot.png
+2025-11-12 18:52:42,220 - visualization - INFO - Creating 3D PCA plot...
+2025-11-12 18:52:42,660 - visualization - INFO - 3D PCA plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_3d_plot.png
+2025-11-12 18:52:42,661 - visualization - INFO - Creating 2D PCA plot...
+2025-11-12 18:52:43,024 - visualization - INFO - 2D PCA plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_2d_plot.png
+2025-11-12 18:52:43,024 - visualization - INFO - Creating PCA loading heatmap...
+2025-11-12 18:52:43,473 - visualization - INFO - Loading heatmap saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_loadings.png
+2025-11-12 18:52:43,473 - visualization - INFO - Testing statistical significance of group separation...
+2025-11-12 18:52:43,474 - visualization - INFO - PC1: F=2.6446, p=0.0714
+2025-11-12 18:52:43,474 - visualization - INFO - PC2: F=0.5891, p=0.5550
+2025-11-12 18:52:43,474 - visualization - INFO - PC3: F=15.1200, p=0.0000
+2025-11-12 18:52:43,474 - visualization - INFO - ================================================================================
+2025-11-12 18:52:43,474 - visualization - INFO - PCA Analysis Complete
+2025-11-12 18:52:43,474 - visualization - INFO - ================================================================================
+2025-11-12 18:52:43,474 - __main__ - INFO - 
+================================================================================
+2025-11-12 18:52:43,474 - __main__ - INFO - GENERATING SUMMARY REPORT
+2025-11-12 18:52:43,474 - __main__ - INFO - ================================================================================
+2025-11-12 18:52:43,479 - utils - INFO - Summary report created: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/summary_report.txt
+2025-11-12 18:52:43,495 - utils - INFO - Results saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pipeline_results.json
+2025-11-12 18:52:43,495 - __main__ - INFO - 
+================================================================================
+2025-11-12 18:52:43,495 - __main__ - INFO - PIPELINE EXECUTION COMPLETE
+2025-11-12 18:52:43,495 - __main__ - INFO - ================================================================================
+2025-11-12 18:52:43,495 - __main__ - INFO - Completed at: 2025-11-12 18:52:43
+2025-11-12 18:52:43,495 - __main__ - INFO - Total duration: 0:00:20.139751
+2025-11-12 18:52:43,495 - __main__ - INFO - Results saved to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output
+2025-11-12 18:52:43,495 - __main__ - INFO - ================================================================================

@@ -1,0 +1,203 @@
+2025-10-31 13:34:17,416 - __main__ - INFO - ================================================================================
+2025-10-31 13:34:17,416 - __main__ - INFO - ADHD DIGITAL PHENOTYPE ANALYSIS PIPELINE
+2025-10-31 13:34:17,416 - __main__ - INFO - Started at: 2025-10-31 13:34:17
+2025-10-31 13:34:17,416 - __main__ - INFO - ================================================================================
+2025-10-31 13:34:17,416 - __main__ - INFO - 
+================================================================================
+2025-10-31 13:34:17,416 - __main__ - INFO - PHASE 0: DATA LOADING AND PREPARATION
+2025-10-31 13:34:17,416 - __main__ - INFO - ================================================================================
+2025-10-31 13:34:17,416 - data_loader - INFO - ================================================================================
+2025-10-31 13:34:17,416 - data_loader - INFO - Starting data loading and preparation
+2025-10-31 13:34:17,416 - data_loader - INFO - ================================================================================
+2025-10-31 13:34:17,416 - data_loader - INFO - Loading Fitbit data from /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/fitbit_data.xlsx
+2025-10-31 13:34:17,502 - data_loader - INFO - Found 14 sheets: ['NC Controls', 'ADHD_preprocessed', 'ADHD_Unmedicated', 'ADHD_Stimulants', 'ADHD_NonStimulants', 'ABCD_Methylphenidate_only', 'ADHD_Amphetamine_Only', 'ADHD_Lisdexamfetamine_Only', 'ADHD_Guanfacine_Only', 'ADHD_Atomoxetine_Only', 'ADHD_Dexmethylphenidate_Only', 'HR_explained', 'ADHD_OLD', 'ADHD_Medicated_OLD']
+2025-10-31 13:34:17,503 - data_loader - INFO - Loading sheet: NC Controls
+2025-10-31 13:34:19,447 - data_loader - INFO -   Assigned as Control group: 2238 subjects
+2025-10-31 13:34:19,448 - data_loader - INFO - Loading sheet: ADHD_preprocessed
+2025-10-31 13:34:19,726 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_preprocessed', defaulting to control
+2025-10-31 13:34:19,727 - data_loader - INFO - Loading sheet: ADHD_Unmedicated
+2025-10-31 13:34:19,861 - data_loader - INFO -   Assigned as Unmedicated ADHD: 143 subjects
+2025-10-31 13:34:19,861 - data_loader - INFO - Loading sheet: ADHD_Stimulants
+2025-10-31 13:34:19,998 - data_loader - INFO -   Assigned as Stimulant ADHD: 110 subjects
+2025-10-31 13:34:19,998 - data_loader - INFO - Loading sheet: ADHD_NonStimulants
+2025-10-31 13:34:20,038 - data_loader - INFO -   Assigned as Stimulant ADHD: 15 subjects
+2025-10-31 13:34:20,038 - data_loader - INFO - Loading sheet: ABCD_Methylphenidate_only
+2025-10-31 13:34:20,069 - data_loader - WARNING -   Could not determine group for sheet 'ABCD_Methylphenidate_only', defaulting to control
+2025-10-31 13:34:20,069 - data_loader - INFO - Loading sheet: ADHD_Amphetamine_Only
+2025-10-31 13:34:20,097 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_Amphetamine_Only', defaulting to control
+2025-10-31 13:34:20,097 - data_loader - INFO - Loading sheet: ADHD_Lisdexamfetamine_Only
+2025-10-31 13:34:20,126 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_Lisdexamfetamine_Only', defaulting to control
+2025-10-31 13:34:20,126 - data_loader - INFO - Loading sheet: ADHD_Guanfacine_Only
+2025-10-31 13:34:20,153 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_Guanfacine_Only', defaulting to control
+2025-10-31 13:34:20,154 - data_loader - INFO - Loading sheet: ADHD_Atomoxetine_Only
+2025-10-31 13:34:20,181 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_Atomoxetine_Only', defaulting to control
+2025-10-31 13:34:20,181 - data_loader - INFO - Loading sheet: ADHD_Dexmethylphenidate_Only
+2025-10-31 13:34:20,209 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_Dexmethylphenidate_Only', defaulting to control
+2025-10-31 13:34:20,209 - data_loader - INFO - Loading sheet: HR_explained
+2025-10-31 13:34:20,307 - data_loader - WARNING -   Could not determine group for sheet 'HR_explained', defaulting to control
+2025-10-31 13:34:20,307 - data_loader - INFO - Loading sheet: ADHD_OLD
+2025-10-31 13:34:20,362 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_OLD', defaulting to control
+2025-10-31 13:34:20,362 - data_loader - INFO - Loading sheet: ADHD_Medicated_OLD
+2025-10-31 13:34:20,431 - data_loader - WARNING -   Could not determine group for sheet 'ADHD_Medicated_OLD', defaulting to control
+2025-10-31 13:34:20,452 - data_loader - INFO - Successfully loaded 3404 total rows from 14 sheets
+2025-10-31 13:34:20,452 - data_loader - INFO - Group distribution after loading:
+2025-10-31 13:34:20,452 - data_loader - INFO -   Healthy Control: 3136
+2025-10-31 13:34:20,452 - data_loader - INFO -   ADHD Unmedicated: 143
+2025-10-31 13:34:20,452 - data_loader - INFO -   ADHD Stimulant: 125
+2025-10-31 13:34:20,453 - data_loader - INFO - Loading medication data from /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/medsy01.xlsx
+2025-10-31 13:34:30,186 - data_loader - INFO - Successfully loaded 39766 medication records
+2025-10-31 13:34:30,186 - data_loader - INFO - Creating medication group classifications
+2025-10-31 13:34:35,829 - data_loader - INFO - Medication groups: {'none': 36749, 'stimulant': 3017}
+2025-10-31 13:34:35,882 - data_loader - INFO - Merging datasets and creating analysis groups
+2025-10-31 13:34:35,907 - data_loader - WARNING - No 'adhd_diagnosis' column found. Inferring groups from medication only.
+2025-10-31 13:34:35,908 - data_loader - INFO - Analysis group distribution:
+2025-10-31 13:34:35,908 - data_loader - INFO -   Healthy Control: 10701
+2025-10-31 13:34:35,908 - data_loader - INFO -   ADHD Stimulant: 414
+2025-10-31 13:34:35,908 - data_loader - INFO - Preparing covariates
+2025-10-31 13:34:35,911 - data_loader - WARNING - Missing covariates: ['interview_age', 'sex', 'family_income', 'race_eth_cat']
+2025-10-31 13:34:35,911 - data_loader - INFO - Found 125 available Fitbit features
+2025-10-31 13:34:35,911 - utils - INFO - Performing data quality checks...
+2025-10-31 13:34:36,048 - utils - INFO - Data quality check complete. Total subjects: 11115
+2025-10-31 13:34:36,048 - utils - INFO - Features with high missing rate: 0
+2025-10-31 13:34:36,048 - utils - INFO - Handling missing values using method: drop
+2025-10-31 13:34:36,055 - utils - INFO - Dropped rows with missing values. Remaining: 10513
+2025-10-31 13:34:36,055 - data_loader - INFO - ================================================================================
+2025-10-31 13:34:36,055 - data_loader - INFO - Data preparation complete. Final dataset: 10513 subjects
+2025-10-31 13:34:36,055 - data_loader - INFO - ================================================================================
+2025-10-31 13:34:36,066 - __main__ - INFO - Loaded dataset: 10513 subjects, 125 features
+2025-10-31 13:34:36,066 - __main__ - INFO - Found 2 groups for analysis
+2025-10-31 13:34:36,067 - utils - INFO - Performing data quality checks...
+2025-10-31 13:34:36,134 - utils - INFO - Data quality check complete. Total subjects: 10513
+2025-10-31 13:34:36,134 - utils - INFO - Features with high missing rate: 0
+2025-10-31 13:34:36,134 - residualization - INFO - ================================================================================
+2025-10-31 13:34:36,134 - residualization - INFO - PHASE 1: RESIDUALIZATION - Removing Covariate Effects
+2025-10-31 13:34:36,134 - residualization - INFO - ================================================================================
+2025-10-31 13:34:36,139 - residualization - INFO - Using 10099 healthy controls for regression models
+2025-10-31 13:34:36,139 - residualization - WARNING - Covariate interview_age not found in dataframe
+2025-10-31 13:34:36,140 - residualization - WARNING - Covariate family_income not found in dataframe
+2025-10-31 13:34:36,140 - residualization - INFO - Using 0 covariate columns: []
+2025-10-31 13:34:36,140 - residualization - INFO - Residualizing 125 features...
+2025-10-31 13:34:36,243 - residualization - INFO - Progress: 50/125 features processed
+2025-10-31 13:34:36,351 - residualization - INFO - Progress: 100/125 features processed
+2025-10-31 13:34:36,413 - residualization - INFO - ================================================================================
+2025-10-31 13:34:36,413 - residualization - INFO - Residualization complete:
+2025-10-31 13:34:36,413 - residualization - INFO -   Successful: 125 features
+2025-10-31 13:34:36,413 - residualization - INFO -   Failed: 0 features
+2025-10-31 13:34:36,413 - residualization - INFO - ================================================================================
+2025-10-31 13:34:36,419 - residualization - INFO - Residualization statistics saved to residualization_statistics.csv
+2025-10-31 13:34:36,419 - residualization - INFO - Validating residualization effectiveness...
+2025-10-31 13:34:36,420 - residualization - WARNING - Covariate interview_age not available for validation
+2025-10-31 13:34:37,161 - __main__ - INFO - Residualized data saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/residualized_data.csv
+2025-10-31 13:34:37,162 - __main__ - INFO - 
+Running predictive models with 125 features
+2025-10-31 13:34:37,162 - __main__ - WARNING - Group unmedicated_adhd not found in data. Skipping comparison.
+2025-10-31 13:34:37,162 - predictive_models - INFO - ================================================================================
+2025-10-31 13:34:37,162 - predictive_models - INFO - PHASE 2: PREDICTIVE MODELING
+2025-10-31 13:34:37,162 - predictive_models - INFO - Comparing: Healthy Control vs ADHD Stimulant
+2025-10-31 13:34:37,162 - predictive_models - INFO - ================================================================================
+2025-10-31 13:34:37,162 - predictive_models - INFO - Preparing data for comparison: Group 0 vs Group 2
+2025-10-31 13:34:37,179 - predictive_models - INFO - Data prepared: 10513 samples, 125 features
+2025-10-31 13:34:37,179 - predictive_models - INFO -   Group 0: 10099 samples
+2025-10-31 13:34:37,179 - predictive_models - INFO -   Group 2: 414 samples
+2025-10-31 13:34:37,180 - predictive_models - INFO - Class distribution: {0: 10099, 1: 414}
+2025-10-31 13:34:37,185 - predictive_models - INFO - Train set: 7359 samples, Test set: 3154 samples
+2025-10-31 13:34:37,185 - predictive_models - INFO - Training Logistic Regression model...
+2025-10-31 13:34:37,620 - predictive_models - INFO - Logistic Regression Results:
+2025-10-31 13:34:37,620 - predictive_models - INFO -   Accuracy: 0.7435
+2025-10-31 13:34:37,620 - predictive_models - INFO -   ROC-AUC: 0.8015
+2025-10-31 13:34:37,620 - predictive_models - INFO -   CV ROC-AUC: 0.7878 (+/- 0.0281)
+2025-10-31 13:34:37,620 - predictive_models - INFO -   Precision: 0.1050
+2025-10-31 13:34:37,620 - predictive_models - INFO -   Recall: 0.7339
+2025-10-31 13:34:37,620 - predictive_models - INFO -   F1-Score: 0.1837
+2025-10-31 13:34:37,621 - predictive_models - INFO - Training Random Forest model...
+2025-10-31 13:34:39,471 - predictive_models - INFO - Random Forest Results:
+2025-10-31 13:34:39,472 - predictive_models - INFO -   Accuracy: 0.9658
+2025-10-31 13:34:39,472 - predictive_models - INFO -   ROC-AUC: 0.9576
+2025-10-31 13:34:39,472 - predictive_models - INFO -   CV ROC-AUC: 0.8779 (+/- 0.0413)
+2025-10-31 13:34:39,472 - predictive_models - INFO -   Precision: 0.5408
+2025-10-31 13:34:39,472 - predictive_models - INFO -   Recall: 0.8548
+2025-10-31 13:34:39,472 - predictive_models - INFO -   F1-Score: 0.6625
+2025-10-31 13:34:39,472 - predictive_models - INFO - 
+================================================================================
+2025-10-31 13:34:39,472 - predictive_models - INFO - MODEL COMPARISON SUMMARY
+2025-10-31 13:34:39,472 - predictive_models - INFO - ================================================================================
+2025-10-31 13:34:39,472 - predictive_models - INFO - Metric               Logistic Reg    Random Forest  
+2025-10-31 13:34:39,472 - predictive_models - INFO - --------------------------------------------------------------------------------
+2025-10-31 13:34:39,472 - predictive_models - INFO - Accuracy             0.7435          0.9658         
+2025-10-31 13:34:39,472 - predictive_models - INFO - ROC-AUC              0.8015          0.9576         
+2025-10-31 13:34:39,472 - predictive_models - INFO - Precision            0.1050          0.5408         
+2025-10-31 13:34:39,472 - predictive_models - INFO - Recall               0.7339          0.8548         
+2025-10-31 13:34:39,472 - predictive_models - INFO - F1-Score             0.1837          0.6625         
+2025-10-31 13:34:39,472 - predictive_models - INFO - ================================================================================
+2025-10-31 13:34:39,473 - predictive_models - INFO - Creating visualization plots...
+2025-10-31 13:34:40,615 - predictive_models - INFO - Plots saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/model_Healthy Control_vs_ADHD Stimulant_results.png
+2025-10-31 13:34:40,616 - __main__ - INFO - Results saved for comparison: Healthy Control_vs_ADHD Stimulant
+2025-10-31 13:34:40,616 - __main__ - WARNING - Group unmedicated_adhd not found in data. Skipping comparison.
+2025-10-31 13:34:40,616 - visualization - INFO - ================================================================================
+2025-10-31 13:34:40,616 - visualization - INFO - PHASE 3: PCA ANALYSIS - Visualizing Digital Phenotypes
+2025-10-31 13:34:40,616 - visualization - INFO - ================================================================================
+2025-10-31 13:34:40,616 - visualization - INFO - Performing PCA with 10 components...
+2025-10-31 13:34:40,639 - visualization - INFO - PCA Results:
+2025-10-31 13:34:40,639 - visualization - INFO -   PC1: 0.1625 variance (0.1625 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC2: 0.1276 variance (0.2901 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC3: 0.0958 variance (0.3859 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC4: 0.0834 variance (0.4693 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC5: 0.0571 variance (0.5264 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC6: 0.0406 variance (0.5669 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC7: 0.0377 variance (0.6047 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC8: 0.0318 variance (0.6365 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC9: 0.0274 variance (0.6639 cumulative)
+2025-10-31 13:34:40,639 - visualization - INFO -   PC10: 0.0269 variance (0.6908 cumulative)
+2025-10-31 13:34:40,640 - visualization - INFO - Creating scree plot...
+2025-10-31 13:34:40,892 - visualization - INFO - Scree plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_scree_plot.png
+2025-10-31 13:34:40,892 - visualization - INFO - Performing PCA with 2 components...
+2025-10-31 13:34:40,979 - visualization - INFO - PCA Results:
+2025-10-31 13:34:40,979 - visualization - INFO -   PC1: 0.1625 variance (0.1625 cumulative)
+2025-10-31 13:34:40,980 - visualization - INFO -   PC2: 0.1276 variance (0.2901 cumulative)
+2025-10-31 13:34:40,980 - visualization - INFO - Creating 2D PCA plot...
+2025-10-31 13:34:41,403 - visualization - INFO - 2D PCA plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_2d_plot.png
+2025-10-31 13:34:41,403 - visualization - INFO - Performing PCA with 3 components...
+2025-10-31 13:34:41,424 - visualization - INFO - PCA Results:
+2025-10-31 13:34:41,424 - visualization - INFO -   PC1: 0.1625 variance (0.1625 cumulative)
+2025-10-31 13:34:41,424 - visualization - INFO -   PC2: 0.1276 variance (0.2901 cumulative)
+2025-10-31 13:34:41,424 - visualization - INFO -   PC3: 0.0958 variance (0.3859 cumulative)
+2025-10-31 13:34:41,424 - visualization - INFO - Creating 3D PCA plot...
+2025-10-31 13:34:41,985 - visualization - INFO - 3D PCA plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_3d_plot.png
+2025-10-31 13:34:41,985 - visualization - INFO - Creating PCA loading heatmap...
+2025-10-31 13:34:42,368 - visualization - INFO - Loading heatmap saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_loadings.png
+2025-10-31 13:34:42,368 - visualization - INFO - Testing statistical significance of group separation...
+2025-10-31 13:34:42,369 - visualization - INFO - PC1: F=12.3842, p=0.0004
+2025-10-31 13:34:42,370 - visualization - INFO - PC2: F=0.0110, p=0.9164
+2025-10-31 13:34:42,370 - visualization - INFO - ================================================================================
+2025-10-31 13:34:42,370 - visualization - INFO - PCA Analysis Complete
+2025-10-31 13:34:42,370 - visualization - INFO - ================================================================================
+2025-10-31 13:34:42,370 - __main__ - INFO - 
+================================================================================
+2025-10-31 13:34:42,370 - __main__ - INFO - GENERATING SUMMARY REPORT
+2025-10-31 13:34:42,370 - __main__ - INFO - ================================================================================
+2025-10-31 13:34:42,370 - utils - INFO - Summary report created: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/summary_report.txt
+2025-10-31 13:34:42,372 - __main__ - ERROR - Pipeline execution failed: Object of type LogisticRegression is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/guozhenghui/Desktop/WXY/ComBio/ABCD/main_pipeline.py", line 168, in main
+    utils.save_results(summary_results, 'pipeline_results.json')
+  File "/Users/guozhenghui/Desktop/WXY/ComBio/ABCD/utils.py", line 368, in save_results
+    json.dump(results_serializable, f, indent=2, cls=NumpyEncoder) # <-- Add cls=NumpyEncoder
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  [Previous line repeated 1 more time]
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Users/guozhenghui/Desktop/WXY/ComBio/ABCD/utils.py", line 48, in default
+    return super(NumpyEncoder, self).default(obj)
+  File "/opt/miniconda3/envs/bioinfo/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type LogisticRegression is not JSON serializable
+2025-10-31 13:34:42,373 - __main__ - ERROR - Pipeline failed with error

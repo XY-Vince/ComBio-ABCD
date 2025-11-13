@@ -1,0 +1,24 @@
+# Core Data Science Libraries
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+
+# Statistical Modeling
+statsmodels>=0.14.0
+
+# Machine Learning
+scikit-learn>=1.2.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Excel File Support
+openpyxl>=3.0.0
+xlrd>=2.0.0
+
+# Progress Bars (optional but useful)
+tqdm>=4.64.0
+
+# Testing (optional)
+pytest>=7.2.0

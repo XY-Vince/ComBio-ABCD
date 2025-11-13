@@ -1,0 +1,51 @@
+================================================================================
+ADHD DIGITAL PHENOTYPE ANALYSIS - SUMMARY REPORT
+================================================================================
+
+DATA QUALITY
+----------------------------------------
+Total Subjects: 2491
+
+Group Distribution:
+  Healthy Control: 2238
+  ADHD Unmedicated: 143
+  ADHD Stimulant: 110
+
+Features with High Missing Rate: 0
+
+
+MODEL PERFORMANCE
+----------------------------------------
+
+Comparison: Healthy Control_vs_ADHD Unmedicated
+  Logistic Regression:
+    Accuracy: 0.670
+    ROC-AUC: 0.529
+  Random Forest:
+    Accuracy: 0.937
+    ROC-AUC: 0.532
+
+Comparison: Healthy Control_vs_ADHD Stimulant
+  Logistic Regression:
+    Accuracy: 0.743
+    ROC-AUC: 0.649
+  Random Forest:
+    Accuracy: 0.938
+    ROC-AUC: 0.635
+
+Comparison: ADHD Unmedicated_vs_ADHD Stimulant
+  Logistic Regression:
+    Accuracy: 0.684
+    ROC-AUC: 0.695
+  Random Forest:
+    Accuracy: 0.618
+    ROC-AUC: 0.660
+
+PCA RESULTS
+----------------------------------------
+  PC1: 16.02% variance explained
+  PC2: 13.05% variance explained
+
+================================================================================
+Report saved to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/summary_report.txt
+================================================================================

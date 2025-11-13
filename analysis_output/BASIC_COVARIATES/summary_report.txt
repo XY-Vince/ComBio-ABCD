@@ -1,0 +1,233 @@
+% python log_analyzer.py
+
+
+================================================================================
+MINIMAL PIPELINE TEST
+Testing each phase independently to isolate failures
+================================================================================
+
+================================================================================
+TEST: PHASE 0 - DATA LOADING
+================================================================================
+INFO:data_loader:================================================================================
+INFO:data_loader:Starting data loading and preparation
+INFO:data_loader:================================================================================
+INFO:data_loader:Loading Fitbit data from /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/source_files/fitbit_data.xlsx
+INFO:data_loader:Found 14 sheets in file: ['NC_Controls', 'ADHD_preprocessed', 'ADHD_Unmedicated', 'ADHD_Stimulants', 'ADHD_NonStimulants', 'ABCD_Methylphenidate_only', 'ADHD_Amphetamine_Only', 'ADHD_Lisdexamfetamine_Only', 'ADHD_Guanfacine_Only', 'ADHD_Atomoxetine_Only', 'ADHD_Dexmethylphenidate_Only', 'HR_explained', 'ADHD_OLD', 'ADHD_Medicated_OLD']
+INFO:data_loader:Loading ONLY specified sheets: ['NC_Controls', 'ADHD_Unmedicated', 'ADHD_Stimulants']
+INFO:data_loader:Loading sheet: NC_Controls
+INFO:data_loader:  ✓ Assigned to Healthy Control: 2238 subjects
+INFO:data_loader:Loading sheet: ADHD_Unmedicated
+INFO:data_loader:  ✓ Assigned to ADHD Unmedicated: 142 subjects
+INFO:data_loader:Loading sheet: ADHD_Stimulants
+INFO:data_loader:  ✓ Assigned to ADHD Stimulant: 107 subjects
+INFO:data_loader:Successfully loaded 2487 total rows from 3 sheets
+INFO:data_loader:============================================================
+INFO:data_loader:FINAL GROUP DISTRIBUTION:
+INFO:data_loader:============================================================
+INFO:data_loader:  Healthy Control: 2238 subjects
+INFO:data_loader:  ADHD Unmedicated: 142 subjects
+INFO:data_loader:  ADHD Stimulant: 107 subjects
+INFO:data_loader:============================================================
+INFO:data_loader:Loading metadata from /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/source_files/ABCD_metadata_features_07232022.csv
+INFO:data_loader:Successfully loaded 2270 metadata records
+INFO:data_loader:Available covariates: ['sex', 'interview_age']
+INFO:data_loader:Metadata prepared: 2270 unique subjects with 2 covariates
+INFO:data_loader:Preparing merged dataset
+INFO:data_loader:Merging with metadata covariates...
+INFO:data_loader:  sex: 1309/2487 (52.6%) available
+INFO:data_loader:  interview_age: 1309/2487 (52.6%) available
+INFO:data_loader:Final analysis group distribution:
+INFO:data_loader:  Healthy Control: 2238
+INFO:data_loader:  ADHD Unmedicated: 142
+INFO:data_loader:  ADHD Stimulant: 107
+INFO:utils:Handling missing values using method: drop
+INFO:utils:Dropped 1178 rows with missing values. Remaining: 1309
+INFO:data_loader:Found 125 available Fitbit features from config list
+INFO:data_loader:Converting features to numeric type...
+INFO:data_loader:Feature type conversion complete
+INFO:utils:Performing data quality checks...
+INFO:utils:Data quality check complete. Total subjects: 1309
+INFO:utils:Features with high missing rate: 0
+INFO:data_loader:================================================================================
+INFO:data_loader:Data preparation complete. Final dataset: 1309 subjects
+INFO:data_loader:================================================================================
+✅ Data loaded: 1309 subjects, 125 features
+
+🔍 Checking feature data types...
+  avg_hr_deep_mean: dtype=float64, sample=67.6666666666667
+  avg_hr_rem_mean: dtype=float64, sample=65.0
+  first_inbed_minutes_min: dtype=float64, sample=563.0
+  first_sleep_minutes_min: dtype=float64, sample=571.0
+  outbed_minutes_min: dtype=float64, sample=1079.0
+
+📊 Numeric features: 125/125
+
+================================================================================
+TEST: PHASE 1 - RESIDUALIZATION
+================================================================================
+INFO:residualization:================================================================================
+INFO:residualization:PHASE 1: RESIDUALIZATION - Removing Covariate Effects
+INFO:residualization:================================================================================
+INFO:residualization:Preparing covariates for residualization...
+INFO:data_loader:Preparing covariates
+INFO:data_loader:Converting sex to dummy variables
+INFO:residualization:Re-validating numeric types on prepared data...
+INFO:residualization:Type conversion: 10 success, 0 failures
+INFO:residualization:Verifying dtypes after conversion:
+INFO:residualization:  avg_hr_deep_mean: dtype=float64, is_numeric=True
+INFO:residualization:  avg_hr_rem_mean: dtype=float64, is_numeric=True
+INFO:residualization:  first_inbed_minutes_min: dtype=float64, is_numeric=True
+INFO:residualization:Using 1171 healthy controls for regression models
+INFO:residualization:Using 2 covariate columns: ['interview_age', 'sex_M']
+INFO:residualization:Residualizing 10 features...
+INFO:residualization:================================================================================
+INFO:residualization:Residualization complete:
+INFO:residualization:  Successful: 10 features
+INFO:residualization:  Failed: 0 features
+INFO:residualization:================================================================================
+INFO:residualization:Residualization statistics saved to residualization_statistics.csv
+✅ Residualized 10/10 test features
+
+📊 Sample statistics:
+  avg_hr_deep_mean: R²=0.0800
+  avg_hr_rem_mean: R²=0.0917
+  first_inbed_minutes_min: R²=0.0082
+
+================================================================================
+TEST: PHASE 2 - PREDICTIVE MODELING
+================================================================================
+INFO:predictive_models:================================================================================
+INFO:predictive_models:PHASE 2: PREDICTIVE MODELING
+INFO:predictive_models:Comparing: Healthy Control vs ADHD Unmedicated
+INFO:predictive_models:================================================================================
+INFO:predictive_models:Preparing data for comparison: Group 0 vs Group 1
+INFO:predictive_models:Data prepared: 1245 samples, 10 features
+INFO:predictive_models:  Group 0: 1171 samples
+INFO:predictive_models:  Group 1: 74 samples
+INFO:predictive_models:Class distribution: {0: 1171, 1: 74}
+INFO:predictive_models:Train set: 871 samples, Test set: 374 samples
+INFO:predictive_models:Training Logistic Regression model...
+INFO:predictive_models:Logistic Regression Results:
+INFO:predictive_models:  Accuracy: 0.5535
+INFO:predictive_models:  ROC-AUC: 0.4503
+INFO:predictive_models:  CV ROC-AUC: 0.4791 (+/- 0.0690)
+INFO:predictive_models:  Precision: 0.0552
+INFO:predictive_models:  Recall: 0.4091
+INFO:predictive_models:  F1-Score: 0.0973
+INFO:predictive_models:Training Random Forest model...
+INFO:predictive_models:Random Forest Results:
+INFO:predictive_models:  Accuracy: 0.9118
+INFO:predictive_models:  ROC-AUC: 0.5487
+INFO:predictive_models:  CV ROC-AUC: 0.5205 (+/- 0.0923)
+INFO:predictive_models:  Precision: 0.0769
+INFO:predictive_models:  Recall: 0.0455
+INFO:predictive_models:  F1-Score: 0.0571
+INFO:predictive_models:
+================================================================================
+INFO:predictive_models:MODEL COMPARISON SUMMARY
+INFO:predictive_models:================================================================================
+INFO:predictive_models:Metric               Logistic Reg    Random Forest  
+INFO:predictive_models:--------------------------------------------------------------------------------
+INFO:predictive_models:Accuracy             0.5535          0.9118         
+INFO:predictive_models:ROC-AUC              0.4503          0.5487         
+INFO:predictive_models:Precision            0.0552          0.0769         
+INFO:predictive_models:Recall               0.4091          0.0455         
+INFO:predictive_models:F1-Score             0.0973          0.0571         
+INFO:predictive_models:================================================================================
+✅ Models trained successfully!
+   LR ROC-AUC: 0.4503
+   RF ROC-AUC: 0.5487
+
+================================================================================
+TEST: PHASE 3 - PCA VISUALIZATION
+================================================================================
+INFO:visualization:================================================================================
+INFO:visualization:PHASE 3: PCA ANALYSIS - Visualizing Digital Phenotypes
+INFO:visualization:================================================================================
+INFO:visualization:Performing PCA with 10 components...
+INFO:visualization:PCA Results:
+INFO:visualization:  PC1: 0.3305 variance (0.3305 cumulative)
+INFO:visualization:  PC2: 0.1986 variance (0.5291 cumulative)
+INFO:visualization:  PC3: 0.1859 variance (0.7150 cumulative)
+INFO:visualization:  PC4: 0.1350 variance (0.8500 cumulative)
+INFO:visualization:  PC5: 0.0795 variance (0.9295 cumulative)
+INFO:visualization:  PC6: 0.0444 variance (0.9739 cumulative)
+INFO:visualization:  PC7: 0.0123 variance (0.9861 cumulative)
+INFO:visualization:  PC8: 0.0085 variance (0.9946 cumulative)
+INFO:visualization:  PC9: 0.0050 variance (0.9997 cumulative)
+INFO:visualization:  PC10: 0.0003 variance (1.0000 cumulative)
+INFO:visualization:Creating scree plot...
+INFO:visualization:Scree plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_scree_plot.png
+INFO:visualization:Creating 3D PCA plot...
+INFO:visualization:3D PCA plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_3d_plot.png
+INFO:visualization:Creating 2D PCA plot...
+INFO:visualization:2D PCA plot saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_2d_plot.png
+INFO:visualization:Creating PCA loading heatmap...
+INFO:visualization:Loading heatmap saved to /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/pca_loadings.png
+INFO:visualization:Testing statistical significance of group separation...
+INFO:visualization:PC1: F=0.1921, p=0.8253
+INFO:visualization:PC2: F=5.6698, p=0.0035
+INFO:visualization:PC3: F=14.5534, p=0.0000
+INFO:visualization:================================================================================
+INFO:visualization:PCA Analysis Complete
+INFO:visualization:================================================================================
+✅ PCA completed successfully!
+   PC1 variance: 33.05%
+
+
+================================================================================
+✅ ALL PHASES PASSED!
+================================================================================
+================================================================================
+ADHD DIGITAL PHENOTYPE ANALYSIS - SUMMARY REPORT
+================================================================================
+
+DATA QUALITY
+----------------------------------------
+Total Subjects (after cleaning): 1309
+
+Group Distribution:
+  Healthy Control: 1171
+  ADHD Unmedicated: 74
+  ADHD Stimulant: 64
+
+Features with High Missing Rate: 0
+
+
+MODEL PERFORMANCE
+----------------------------------------
+
+Comparison: Healthy Control_vs_ADHD Unmedicated
+  Logistic Regression:
+    Accuracy: 0.719
+    ROC-AUC: 0.619
+  Random Forest:
+    Accuracy: 0.941
+    ROC-AUC: 0.508
+
+Comparison: Healthy Control_vs_ADHD Stimulant
+  Logistic Regression:
+    Accuracy: 0.841
+    ROC-AUC: 0.649
+  Random Forest:
+    Accuracy: 0.919
+    ROC-AUC: 0.674
+
+Comparison: ADHD Unmedicated_vs_ADHD Stimulant
+  Logistic Regression:
+    Accuracy: 0.571
+    ROC-AUC: 0.728
+  Random Forest:
+    Accuracy: 0.714
+    ROC-AUC: 0.709
+
+PCA RESULTS
+----------------------------------------
+  PC1: 15.73% variance explained
+  PC2: 12.24% variance explained
+  PC3: 10.21% variance explained
+
+================================================================================
+Report saved to: /Users/guozhenghui/Desktop/WXY/ComBio/ABCD/analysis_output/summary_report.txt
+================================================================================

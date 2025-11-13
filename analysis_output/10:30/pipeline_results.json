@@ -1,0 +1,1150 @@
+{
+  "data_quality": {
+    "total_subjects": 10513,
+    "group_counts": {
+      "0": 10099,
+      "2": 414
+    },
+    "missing_features": {
+      "avg_hr_deep_mean": 0.0,
+      "avg_hr_rem_mean": 0.0,
+      "first_inbed_minutes_min": 0.0,
+      "first_sleep_minutes_min": 0.0,
+      "outbed_minutes_min": 0.0,
+      "wakeup_minutes_min": 0.0,
+      "sleepperiod_minutes_min": 0.0,
+      "wake_minutes_min": 0.0,
+      "light_minutes_min": 0.0,
+      "deep_minutes_min": 0.0,
+      "rem_minutes_min": 0.0,
+      "wake_count_min": 0.0,
+      "avg_hr_wake_min": 0.0,
+      "avg_hr_light_min": 0.0,
+      "avg_hr_deep_min": 0.0,
+      "avg_hr_rem_min": 0.0,
+      "first_inbed_minutes_max": 0.0,
+      "first_sleep_minutes_max": 0.0,
+      "outbed_minutes_max": 0.0,
+      "wakeup_minutes_max": 0.0,
+      "sleepperiod_minutes_max": 0.0,
+      "wake_minutes_max": 0.0,
+      "light_minutes_max": 0.0,
+      "deep_minutes_max": 0.0,
+      "rem_minutes_max": 0.0,
+      "wake_count_max": 0.0,
+      "avg_hr_wake_max": 0.0,
+      "avg_hr_light_max": 0.0,
+      "avg_hr_deep_max": 0.0,
+      "avg_hr_rem_max": 0.0,
+      "first_inbed_minutes_median": 0.0,
+      "first_sleep_minutes_median": 0.0,
+      "outbed_minutes_median": 0.0,
+      "wakeup_minutes_median": 0.0,
+      "sleepperiod_minutes_median": 0.0,
+      "wake_minutes_median": 0.0,
+      "light_minutes_median": 0.0,
+      "deep_minutes_median": 0.0,
+      "rem_minutes_median": 0.0,
+      "wake_count_median": 0.0,
+      "avg_hr_wake_median": 0.0,
+      "avg_hr_light_median": 0.0,
+      "avg_hr_deep_median": 0.0,
+      "avg_hr_rem_median": 0.0,
+      "first_inbed_minutes_sd": 0.0,
+      "first_sleep_minutes_sd": 0.0,
+      "outbed_minutes_sd": 0.0,
+      "wakeup_minutes_sd": 0.0,
+      "sleepperiod_minutes_sd": 0.0,
+      "wake_minutes_sd": 0.0,
+      "light_minutes_sd": 0.0,
+      "deep_minutes_sd": 0.0,
+      "rem_minutes_sd": 0.0,
+      "wake_count_sd": 0.0,
+      "avg_hr_wake_sd": 0.0,
+      "avg_hr_light_sd": 0.0,
+      "avg_hr_deep_sd": 0.0,
+      "avg_hr_rem_sd": 0.0,
+      "day_total_steps_no_el_mean": 0.0,
+      "day_min_mean": 0.0,
+      "night_min_mean": 0.0,
+      "sleep_min_mean": 0.0,
+      "excl_day_min_mean": 0.0,
+      "excl_day_min_hr50_mean": 0.0,
+      "excl_day_min_nohr_mean": 0.0,
+      "excl_day_min_hr_rept_mean": 0.0,
+      "excl_night_min_mean": 0.0,
+      "excl_night_min_hr50_mean": 0.0,
+      "excl_night_min_nohr_mean": 0.0,
+      "excl_night_min_hr_rept_mean": 0.0,
+      "excl_sleep_min_mean": 0.0,
+      "excl_sleep_min_hr50_mean": 0.0,
+      "excl_sleep_min_nohr_mean": 0.0,
+      "excl_sleep_min_rept_mean": 0.0,
+      "total_min_mean": 0.0,
+      "total_step_mean": 0.0,
+      "total_ave_met_mean": 0.0,
+      "total_sedentary_min_mean": 0.0,
+      "total_light_active_min_mean": 0.0,
+      "total_fairly_active_min_mean": 0.0,
+      "total_very_active_min_mean": 0.0,
+      "fitbit_totalsteps_mean": 0.0,
+      "fitbit_sedentarymin_mean": 0.0,
+      "fitbit_lightlyactivemin_mean": 0.0,
+      "fitbit_fairlyactivemin_mean": 0.0,
+      "fitbit_veryactivemin_mean": 0.0,
+      "fitbit_restingheartrate_mean": 0.0,
+      "dayt_total_steps_mean": 0.0,
+      "dayt_ave_met_value_mean": 0.0,
+      "dayt_sedentary_min_mean": 0.0,
+      "dayt_light_active_min_mean": 0.0,
+      "dayt_farily_active_min_mean": 0.0,
+      "dayt_very_active_min_mean": 0.0,
+      "day_total_steps_no_el_min": 0.0,
+      "day_min_min": 0.0,
+      "night_min_min": 0.0,
+      "sleep_min_min": 0.0,
+      "day_total_steps_no_el_max": 0.0,
+      "day_min_max": 0.0,
+      "night_min_max": 0.0,
+      "sleep_min_max": 0.0,
+      "day_total_steps_no_el_median": 0.0,
+      "day_min_median": 0.0,
+      "night_min_median": 0.0,
+      "sleep_min_median": 0.0,
+      "day_total_steps_no_el_sd": 0.0,
+      "day_min_sd": 0.0,
+      "night_min_sd": 0.0,
+      "sleep_min_sd": 0.0,
+      "total_min_min": 0.0,
+      "total_step_min": 0.0,
+      "total_ave_met_min": 0.0,
+      "total_sedentary_min_min": 0.0,
+      "total_min_max": 0.0,
+      "total_step_max": 0.0,
+      "total_ave_met_max": 0.0,
+      "total_sedentary_min_max": 0.0,
+      "total_min_median": 0.0,
+      "total_step_median": 0.0,
+      "total_ave_met_median": 0.0,
+      "total_sedentary_min_median": 0.0,
+      "total_min_sd": 0.0,
+      "total_step_sd": 0.0,
+      "total_ave_met_sd": 0.0,
+      "total_sedentary_min_sd": 0.0
+    },
+    "high_missing_features": [],
+    "outlier_counts": {
+      "avg_hr_deep_mean": 29,
+      "avg_hr_rem_mean": 21,
+      "first_inbed_minutes_min": 268,
+      "first_sleep_minutes_min": 282,
+      "outbed_minutes_min": 711,
+      "wakeup_minutes_min": 668,
+      "sleepperiod_minutes_min": 7,
+      "wake_minutes_min": 33,
+      "light_minutes_min": 30,
+      "deep_minutes_min": 14,
+      "rem_minutes_min": 24,
+      "wake_count_min": 48,
+      "avg_hr_wake_min": 26,
+      "avg_hr_light_min": 26,
+      "avg_hr_deep_min": 37,
+      "avg_hr_rem_min": 29,
+      "first_inbed_minutes_max": 198,
+      "first_sleep_minutes_max": 205,
+      "outbed_minutes_max": 18,
+      "wakeup_minutes_max": 15,
+      "sleepperiod_minutes_max": 152,
+      "wake_minutes_max": 72,
+      "light_minutes_max": 128,
+      "deep_minutes_max": 81,
+      "rem_minutes_max": 121,
+      "wake_count_max": 79,
+      "avg_hr_wake_max": 88,
+      "avg_hr_light_max": 69,
+      "avg_hr_deep_max": 61,
+      "avg_hr_rem_max": 84,
+      "first_inbed_minutes_median": 130,
+      "first_sleep_minutes_median": 122,
+      "outbed_minutes_median": 103,
+      "wakeup_minutes_median": 91,
+      "sleepperiod_minutes_median": 134,
+      "wake_minutes_median": 76,
+      "light_minutes_median": 88,
+      "deep_minutes_median": 63,
+      "rem_minutes_median": 62,
+      "wake_count_median": 67,
+      "avg_hr_wake_median": 30,
+      "avg_hr_light_median": 34,
+      "avg_hr_deep_median": 25,
+      "avg_hr_rem_median": 28,
+      "first_inbed_minutes_sd": 203,
+      "first_sleep_minutes_sd": 190,
+      "outbed_minutes_sd": 393,
+      "wakeup_minutes_sd": 390,
+      "sleepperiod_minutes_sd": 129,
+      "wake_minutes_sd": 123,
+      "light_minutes_sd": 149,
+      "deep_minutes_sd": 119,
+      "rem_minutes_sd": 74,
+      "wake_count_sd": 111,
+      "avg_hr_wake_sd": 212,
+      "avg_hr_light_sd": 194,
+      "avg_hr_deep_sd": 162,
+      "avg_hr_rem_sd": 219,
+      "day_total_steps_no_el_mean": 102,
+      "day_min_mean": 175,
+      "night_min_mean": 138,
+      "sleep_min_mean": 172,
+      "excl_day_min_mean": 217,
+      "excl_day_min_hr50_mean": 110,
+      "excl_day_min_nohr_mean": 218,
+      "excl_day_min_hr_rept_mean": 261,
+      "excl_night_min_mean": 187,
+      "excl_night_min_hr50_mean": 180,
+      "excl_night_min_nohr_mean": 200,
+      "excl_night_min_hr_rept_mean": 204,
+      "excl_sleep_min_mean": 210,
+      "excl_sleep_min_hr50_mean": 192,
+      "excl_sleep_min_nohr_mean": 205,
+      "excl_sleep_min_rept_mean": 206,
+      "total_min_mean": 182,
+      "total_step_mean": 98,
+      "total_ave_met_mean": 113,
+      "total_sedentary_min_mean": 144,
+      "total_light_active_min_mean": 34,
+      "total_fairly_active_min_mean": 178,
+      "total_very_active_min_mean": 247,
+      "fitbit_totalsteps_mean": 90,
+      "fitbit_sedentarymin_mean": 135,
+      "fitbit_lightlyactivemin_mean": 34,
+      "fitbit_fairlyactivemin_mean": 182,
+      "fitbit_veryactivemin_mean": 243,
+      "fitbit_restingheartrate_mean": 24,
+      "dayt_total_steps_mean": 102,
+      "dayt_ave_met_value_mean": 46,
+      "dayt_sedentary_min_mean": 73,
+      "dayt_light_active_min_mean": 38,
+      "dayt_farily_active_min_mean": 182,
+      "dayt_very_active_min_mean": 247,
+      "day_total_steps_no_el_min": 170,
+      "day_min_min": 0,
+      "night_min_min": 353,
+      "sleep_min_min": 0,
+      "day_total_steps_no_el_max": 95,
+      "day_min_max": 263,
+      "night_min_max": 161,
+      "sleep_min_max": 167,
+      "day_total_steps_no_el_median": 82,
+      "day_min_median": 226,
+      "night_min_median": 352,
+      "sleep_min_median": 179,
+      "day_total_steps_no_el_sd": 119,
+      "day_min_sd": 109,
+      "night_min_sd": 87,
+      "sleep_min_sd": 108,
+      "total_min_min": 162,
+      "total_step_min": 175,
+      "total_ave_met_min": 131,
+      "total_sedentary_min_min": 174,
+      "total_min_max": 198,
+      "total_step_max": 95,
+      "total_ave_met_max": 144,
+      "total_sedentary_min_max": 162,
+      "total_min_median": 277,
+      "total_step_median": 78,
+      "total_ave_met_median": 100,
+      "total_sedentary_min_median": 226,
+      "total_min_sd": 104,
+      "total_step_sd": 115,
+      "total_ave_met_sd": 138,
+      "total_sedentary_min_sd": 62
+    },
+    "feature_stats": {
+      "avg_hr_deep_mean": {
+        "mean": 72.03352386782908,
+        "std": 8.413053973490928,
+        "min": 5.18532742186755e-09,
+        "max": 103.0,
+        "median": 71.8666666666667
+      },
+      "avg_hr_rem_mean": {
+        "mean": 72.1315057553351,
+        "std": 7.558043804785312,
+        "min": 4.55658036311341e-06,
+        "max": 106.642857142857,
+        "median": 72.2
+      },
+      "first_inbed_minutes_min": {
+        "mean": 559.6647417710005,
+        "std": 100.25700236003358,
+        "min": 0.122052207232453,
+        "max": 1206.0,
+        "median": 567.0
+      },
+      "first_sleep_minutes_min": {
+        "mean": 565.0540111382852,
+        "std": 101.19389195182299,
+        "min": 0.0,
+        "max": 1211.0,
+        "median": 573.0
+      },
+      "outbed_minutes_min": {
+        "mean": 985.8255398423626,
+        "std": 284.83420865770285,
+        "min": 0.0,
+        "max": 1363.0,
+        "median": 1078.0
+      },
+      "wakeup_minutes_min": {
+        "mean": 983.1255740660589,
+        "std": 275.3366908359232,
+        "min": 0.0,
+        "max": 1363.0,
+        "median": 1071.0
+      },
+      "sleepperiod_minutes_min": {
+        "mean": 333.3085064932919,
+        "std": 77.60046666265332,
+        "min": 0.0162932859951556,
+        "max": 525.0,
+        "median": 345.0
+      },
+      "wake_minutes_min": {
+        "mean": 34.17278947745168,
+        "std": 12.138922897885088,
+        "min": 0.46075984615329,
+        "max": 83.5,
+        "median": 34.0
+      },
+      "light_minutes_min": {
+        "mean": 186.06885830492956,
+        "std": 45.00891079166689,
+        "min": 0.016622178620963,
+        "max": 378.0,
+        "median": 189.0
+      },
+      "deep_minutes_min": {
+        "mean": 52.164589049894396,
+        "std": 18.893049622648885,
+        "min": 0.0336187885531231,
+        "max": 116.5,
+        "median": 52.5
+      },
+      "rem_minutes_min": {
+        "mean": 54.62988796905218,
+        "std": 22.913282871751726,
+        "min": 0.0477199177265384,
+        "max": 146.0,
+        "median": 54.5
+      },
+      "wake_count_min": {
+        "mean": 19.321729217032864,
+        "std": 6.031421339473634,
+        "min": 0.0915584423360854,
+        "max": 47.0,
+        "median": 19.0
+      },
+      "avg_hr_wake_min": {
+        "mean": 67.65311548949308,
+        "std": 7.296593168672731,
+        "min": 0.000170462050723235,
+        "max": 97.0,
+        "median": 67.0
+      },
+      "avg_hr_light_min": {
+        "mean": 63.99296032625682,
+        "std": 7.405122664364196,
+        "min": 3.19443389317749e-06,
+        "max": 92.0,
+        "median": 64.0
+      },
+      "avg_hr_deep_min": {
+        "mean": 65.1650646734611,
+        "std": 8.195737928106825,
+        "min": 1.49340393610095e-07,
+        "max": 94.0,
+        "median": 65.0
+      },
+      "avg_hr_rem_min": {
+        "mean": 66.8480322269273,
+        "std": 7.615726089862747,
+        "min": 4.57572574148188e-05,
+        "max": 100.0,
+        "median": 67.0
+      },
+      "first_inbed_minutes_max": {
+        "mean": 790.4040408223578,
+        "std": 135.40753437579554,
+        "min": 0.251628954856936,
+        "max": 1438.0,
+        "median": 764.0
+      },
+      "first_sleep_minutes_max": {
+        "mean": 797.4341719336236,
+        "std": 133.9285088574906,
+        "min": 0.226792573599694,
+        "max": 1439.0,
+        "median": 771.0
+      },
+      "outbed_minutes_max": {
+        "mean": 1274.7224645284978,
+        "std": 87.6602885004537,
+        "min": 0.163798503985955,
+        "max": 1439.0,
+        "median": 1272.0
+      },
+      "wakeup_minutes_max": {
+        "mean": 1271.392325862345,
+        "std": 88.59145793540065,
+        "min": 0.158141409670074,
+        "max": 1439.0,
+        "median": 1269.0
+      },
+      "sleepperiod_minutes_max": {
+        "mean": 546.4206676996434,
+        "std": 68.24872346390733,
+        "min": 0.155697040510445,
+        "max": 1071.5,
+        "median": 540.0
+      },
+      "wake_minutes_max": {
+        "mean": 83.6220049538278,
+        "std": 17.78888113485738,
+        "min": 0.0361868697316663,
+        "max": 194.5,
+        "median": 82.5
+      },
+      "light_minutes_max": {
+        "mean": 336.5065264475872,
+        "std": 51.43275891480453,
+        "min": 0.0352254530281864,
+        "max": 666.5,
+        "median": 333.0
+      },
+      "deep_minutes_max": {
+        "mean": 125.1383785601172,
+        "std": 21.318420827105196,
+        "min": 0.0816076960870606,
+        "max": 204.5,
+        "median": 125.0
+      },
+      "rem_minutes_max": {
+        "mean": 140.25422779694486,
+        "std": 26.568536025614417,
+        "min": 0.075852508214836,
+        "max": 285.0,
+        "median": 140.5
+      },
+      "wake_count_max": {
+        "mean": 40.225695472428576,
+        "std": 7.798857082195168,
+        "min": 0.286366537974726,
+        "max": 84.0,
+        "median": 40.0
+      },
+      "avg_hr_wake_max": {
+        "mean": 80.70902729082269,
+        "std": 9.917589816785592,
+        "min": 9.56165546982639e-06,
+        "max": 126.0,
+        "median": 80.0
+      },
+      "avg_hr_light_max": {
+        "mean": 76.1649998786469,
+        "std": 9.735449309505803,
+        "min": 3.87482564133442e-06,
+        "max": 120.0,
+        "median": 76.0
+      },
+      "avg_hr_deep_max": {
+        "mean": 80.80316829889719,
+        "std": 10.516200246334137,
+        "min": 7.00827500143514e-07,
+        "max": 139.0,
+        "median": 80.0
+      },
+      "avg_hr_rem_max": {
+        "mean": 78.8479289085091,
+        "std": 9.251269976654614,
+        "min": 1.08914472029456e-05,
+        "max": 119.0,
+        "median": 78.0
+      },
+      "first_inbed_minutes_median": {
+        "mean": 649.7238795018717,
+        "std": 77.09640949857932,
+        "min": 0.0164898534266146,
+        "max": 1279.5,
+        "median": 638.5
+      },
+      "first_sleep_minutes_median": {
+        "mean": 656.7205340533505,
+        "std": 77.25030600999592,
+        "min": 0.0133478879261821,
+        "max": 1284.0,
+        "median": 645.0
+      },
+      "outbed_minutes_median": {
+        "mean": 1148.047487321141,
+        "std": 105.70036820914656,
+        "min": 0.0137340671166762,
+        "max": 1408.0,
+        "median": 1145.5
+      },
+      "wakeup_minutes_median": {
+        "mean": 1145.7767836687892,
+        "std": 100.26787775520707,
+        "min": 0.0304841183455757,
+        "max": 1408.0,
+        "median": 1142.5
+      },
+      "sleepperiod_minutes_median": {
+        "mean": 448.4482164015228,
+        "std": 43.57551040989691,
+        "min": 0.339720378363939,
+        "max": 716.75,
+        "median": 452.5
+      },
+      "wake_minutes_median": {
+        "mean": 56.46242722591321,
+        "std": 11.577107011921898,
+        "min": 0.0572415452373878,
+        "max": 102.5,
+        "median": 56.25
+      },
+      "light_minutes_median": {
+        "mean": 259.91545596004744,
+        "std": 34.10199091772118,
+        "min": 0.0616609973020108,
+        "max": 398.25,
+        "median": 260.0
+      },
+      "deep_minutes_median": {
+        "mean": 89.07019604628978,
+        "std": 15.628016542373762,
+        "min": 0.236340940047068,
+        "max": 145.5,
+        "median": 89.75
+      },
+      "rem_minutes_median": {
+        "mean": 97.18977587786645,
+        "std": 19.203505917808613,
+        "min": 0.137745259790148,
+        "max": 175.5,
+        "median": 98.0
+      },
+      "wake_count_median": {
+        "mean": 29.613856874822446,
+        "std": 5.699870866200899,
+        "min": 0.406026201390598,
+        "max": 51.0,
+        "median": 29.5
+      },
+      "avg_hr_wake_median": {
+        "mean": 72.81424410023305,
+        "std": 7.565443491918059,
+        "min": 3.90968436964799e-05,
+        "max": 105.0,
+        "median": 73.0
+      },
+      "avg_hr_light_median": {
+        "mean": 68.87888871737161,
+        "std": 7.649832115837603,
+        "min": 2.3350956511716e-06,
+        "max": 98.0,
+        "median": 69.0
+      },
+      "avg_hr_deep_median": {
+        "mean": 71.63906679091404,
+        "std": 8.486558497985293,
+        "min": 7.32631964590564e-09,
+        "max": 102.0,
+        "median": 71.5
+      },
+      "avg_hr_rem_median": {
+        "mean": 71.85823166212573,
+        "std": 7.548634831232518,
+        "min": 6.84566876814365e-06,
+        "max": 105.5,
+        "median": 72.0
+      },
+      "first_inbed_minutes_sd": {
+        "mean": 69.64725582091803,
+        "std": 48.72444145566969,
+        "min": 0.0986120791186981,
+        "max": 910.753534168273,
+        "median": 57.7493626708459
+      },
+      "first_sleep_minutes_sd": {
+        "mean": 70.12867029216702,
+        "std": 48.556430408730044,
+        "min": 0.0801429727507146,
+        "max": 907.925107043527,
+        "median": 57.5685738284413
+      },
+      "outbed_minutes_sd": {
+        "mean": 93.6475961530587,
+        "std": 114.26283378260403,
+        "min": 0.000381565783321231,
+        "max": 869.741340859453,
+        "median": 61.1649098653011
+      },
+      "wakeup_minutes_sd": {
+        "mean": 92.9008260946215,
+        "std": 111.70226475841352,
+        "min": 0.000702534004489812,
+        "max": 869.741340859453,
+        "median": 61.6948653475831
+      },
+      "sleepperiod_minutes_sd": {
+        "mean": 63.33026178436547,
+        "std": 31.18098696194534,
+        "min": 0.0332859541673915,
+        "max": 417.893227990117,
+        "median": 57.3000872599685
+      },
+      "wake_minutes_sd": {
+        "mean": 14.944645371854463,
+        "std": 5.482596150785591,
+        "min": 0.0,
+        "max": 79.3872365896013,
+        "median": 14.232804617247
+      },
+      "light_minutes_sd": {
+        "mean": 45.39055578549266,
+        "std": 18.031569668859174,
+        "min": 0.0,
+        "max": 225.358233338242,
+        "median": 42.7258703831765
+      },
+      "deep_minutes_sd": {
+        "mean": 22.22350479421469,
+        "std": 6.748463956001208,
+        "min": 0.0282838555837973,
+        "max": 87.57996346197,
+        "median": 21.7525586891246
+      },
+      "rem_minutes_sd": {
+        "mean": 25.98327901974976,
+        "std": 8.528125343949284,
+        "min": 0.0,
+        "max": 105.077748992512,
+        "median": 25.0737958453689
+      },
+      "wake_count_sd": {
+        "mean": 6.3375107082940465,
+        "std": 2.2931044211081226,
+        "min": 0.0,
+        "max": 27.7908857961263,
+        "median": 6.01980857154904
+      },
+      "avg_hr_wake_sd": {
+        "mean": 3.9278590208032824,
+        "std": 1.9189172448935088,
+        "min": 0.0,
+        "max": 18.9590201340798,
+        "median": 3.51572099542143
+      },
+      "avg_hr_light_sd": {
+        "mean": 3.6906114879150724,
+        "std": 1.7966201413820586,
+        "min": 0.0,
+        "max": 18.3111987592293,
+        "median": 3.32105582077536
+      },
+      "avg_hr_deep_sd": {
+        "mean": 4.756616034044128,
+        "std": 2.076135740768116,
+        "min": 0.0,
+        "max": 19.7989898732233,
+        "median": 4.39317652729776
+      },
+      "avg_hr_rem_sd": {
+        "mean": 3.6084712911102623,
+        "std": 1.7359957432515638,
+        "min": 0.0,
+        "max": 20.5060966544099,
+        "median": 3.2659863237109
+      },
+      "day_total_steps_no_el_mean": {
+        "mean": 9083.931427031466,
+        "std": 3067.5812015179595,
+        "min": 0.112602561330388,
+        "max": 22032.9230769231,
+        "median": 8763.93333333333
+      },
+      "day_min_mean": {
+        "mean": 799.975646741352,
+        "std": 82.60974932542045,
+        "min": 0.386746913538864,
+        "max": 1000.8,
+        "median": 812.764705882353
+      },
+      "night_min_mean": {
+        "mean": 415.7192763507045,
+        "std": 93.33670894363557,
+        "min": 0.0,
+        "max": 600.772727272727,
+        "median": 435.761904761905
+      },
+      "sleep_min_mean": {
+        "mean": 483.09820944826134,
+        "std": 64.08064233827753,
+        "min": 0.125198846319756,
+        "max": 649.9375,
+        "median": 493.25
+      },
+      "excl_day_min_mean": {
+        "mean": 199.60008138980527,
+        "std": 131.82641664486405,
+        "min": 0.367600533353018,
+        "max": 918.0,
+        "median": 165.666666666667
+      },
+      "excl_day_min_hr50_mean": {
+        "mean": 0.28786370517481324,
+        "std": 2.025113956057542,
+        "min": 0.0,
+        "max": 52.3333333333333,
+        "median": 0.0
+      },
+      "excl_day_min_nohr_mean": {
+        "mean": 142.54167214177835,
+        "std": 94.29562546398363,
+        "min": 0.0,
+        "max": 748.5,
+        "median": 117.647058823529
+      },
+      "excl_day_min_hr_rept_mean": {
+        "mean": 56.77347970406782,
+        "std": 73.46431476192596,
+        "min": 0.0,
+        "max": 718.0,
+        "median": 33.0
+      },
+      "excl_night_min_mean": {
+        "mean": 23.84221668653861,
+        "std": 28.27773685706285,
+        "min": 0.0,
+        "max": 398.083333333333,
+        "median": 16.4615384615385
+      },
+      "excl_night_min_hr50_mean": {
+        "mean": 4.466948764067405,
+        "std": 22.119636892142807,
+        "min": 0.0,
+        "max": 378.318181818182,
+        "median": 0.0
+      },
+      "excl_night_min_nohr_mean": {
+        "mean": 4.662271431383017,
+        "std": 7.43592972098106,
+        "min": 0.0,
+        "max": 121.533333333333,
+        "median": 1.95454545454545
+      },
+      "excl_night_min_hr_rept_mean": {
+        "mean": 14.912119283319063,
+        "std": 15.379851630932468,
+        "min": 0.0,
+        "max": 150.0,
+        "median": 10.6315789473684
+      },
+      "excl_sleep_min_mean": {
+        "mean": 28.467184691967773,
+        "std": 33.11135321842435,
+        "min": 0.0,
+        "max": 460.75,
+        "median": 19.7
+      },
+      "excl_sleep_min_hr50_mean": {
+        "mean": 5.29165135427572,
+        "std": 25.41453876435792,
+        "min": 0.0,
+        "max": 422.416666666667,
+        "median": 0.0
+      },
+      "excl_sleep_min_nohr_mean": {
+        "mean": 6.010216269180216,
+        "std": 9.858779430030072,
+        "min": 0.0,
+        "max": 155.133333333333,
+        "median": 2.61904761904762
+      },
+      "excl_sleep_min_rept_mean": {
+        "mean": 17.334678217195215,
+        "std": 18.27235044793142,
+        "min": 0.0,
+        "max": 191.375,
+        "median": 12.0
+      },
+      "total_min_mean": {
+        "mean": 1215.6947252472773,
+        "std": 137.64680576719505,
+        "min": 0.48962131579479,
+        "max": 1432.16666666667,
+        "median": 1251.53333333333
+      },
+      "total_step_mean": {
+        "mean": 9044.014415902086,
+        "std": 3052.3938891890534,
+        "min": 0.095549240842866,
+        "max": 22031.5384615385,
+        "median": 8736.76923076923
+      },
+      "total_ave_met_mean": {
+        "mean": 1.7153002203184835,
+        "std": 0.1977774035722652,
+        "min": 0.0403904839661601,
+        "max": 2.78,
+        "median": 1.69571428571429
+      },
+      "total_sedentary_min_mean": {
+        "mean": 914.025654809927,
+        "std": 131.62252445030802,
+        "min": 0.0459978879974347,
+        "max": 1246.83333333333,
+        "median": 934.333333333333
+      },
+      "total_light_active_min_mean": {
+        "mean": 266.8382525770663,
+        "std": 58.35145868188558,
+        "min": 1.90261990870759e-05,
+        "max": 562.5,
+        "median": 265.944444444444
+      },
+      "total_fairly_active_min_mean": {
+        "mean": 24.572555805117656,
+        "std": 19.324556410627082,
+        "min": 0.0,
+        "max": 175.5,
+        "median": 20.0
+      },
+      "total_very_active_min_mean": {
+        "mean": 10.249893631061779,
+        "std": 12.800055658340591,
+        "min": 0.0,
+        "max": 106.6,
+        "median": 5.64705882352941
+      },
+      "fitbit_totalsteps_mean": {
+        "mean": 9128.631919270041,
+        "std": 3083.9899950615086,
+        "min": 0.12766947661786,
+        "max": 22766.1538461538,
+        "median": 8802.53333333333
+      },
+      "fitbit_sedentarymin_mean": {
+        "mean": 700.0928619081145,
+        "std": 129.38972058588018,
+        "min": 0.0520863329687226,
+        "max": 1322.5,
+        "median": 684.0
+      },
+      "fitbit_lightlyactivemin_mean": {
+        "mean": 268.0948426630961,
+        "std": 58.56602587228466,
+        "min": 1.13808084146639e-05,
+        "max": 562.5,
+        "median": 266.722222222222
+      },
+      "fitbit_fairlyactivemin_mean": {
+        "mean": 24.69277505125435,
+        "std": 19.426211535208978,
+        "min": 0.0,
+        "max": 175.5,
+        "median": 20.1176470588235
+      },
+      "fitbit_veryactivemin_mean": {
+        "mean": 10.366426761731006,
+        "std": 12.881878878091687,
+        "min": 0.0,
+        "max": 106.6,
+        "median": 5.75
+      },
+      "fitbit_restingheartrate_mean": {
+        "mean": 71.94487060483797,
+        "std": 7.87110031976381,
+        "min": 8.60088675949786e-08,
+        "max": 101.5,
+        "median": 71.75
+      },
+      "dayt_total_steps_mean": {
+        "mean": 9013.374620027893,
+        "std": 3047.9694537985715,
+        "min": 0.0945454818161462,
+        "max": 21993.4615384615,
+        "median": 8700.30769230769
+      },
+      "dayt_ave_met_value_mean": {
+        "mean": 2.048186292440458,
+        "std": 0.26393871766434207,
+        "min": 0.0299122148517852,
+        "max": 3.425,
+        "median": 2.02777777777778
+      },
+      "dayt_sedentary_min_mean": {
+        "mean": 501.6569356173551,
+        "std": 83.00027628529764,
+        "min": 0.0076829277451501,
+        "max": 819.333333333333,
+        "median": 502.411764705882
+      },
+      "dayt_light_active_min_mean": {
+        "mean": 263.595998068884,
+        "std": 58.02364142344383,
+        "min": 2.93415648478905e-05,
+        "max": 558.5,
+        "median": 262.227272727273
+      },
+      "dayt_farily_active_min_mean": {
+        "mean": 24.525523170437324,
+        "std": 19.293113038444254,
+        "min": 0.0,
+        "max": 175.5,
+        "median": 20.0
+      },
+      "dayt_very_active_min_mean": {
+        "mean": 10.188853440613329,
+        "std": 12.770248105400105,
+        "min": 0.0,
+        "max": 106.6,
+        "median": 5.6
+      },
+      "day_total_steps_no_el_min": {
+        "mean": 2667.2658909170427,
+        "std": 2157.7066420646206,
+        "min": 0.0,
+        "max": 17788.0,
+        "median": 2115.0
+      },
+      "day_min_min": {
+        "mean": 384.69764636269844,
+        "std": 180.60372707761715,
+        "min": 0.236326285887896,
+        "max": 886.0,
+        "median": 375.0
+      },
+      "night_min_min": {
+        "mean": 67.04771587163208,
+        "std": 86.51797204642334,
+        "min": 0.0,
+        "max": 522.0,
+        "median": 44.0
+      },
+      "sleep_min_min": {
+        "mean": 279.7660506719972,
+        "std": 153.8685785100118,
+        "min": 0.0,
+        "max": 590.0,
+        "median": 322.0
+      },
+      "day_total_steps_no_el_max": {
+        "mean": 16449.750121998008,
+        "std": 5567.795710502437,
+        "min": 0.090214829289743,
+        "max": 40496.0,
+        "median": 15753.0
+      },
+      "day_min_max": {
+        "mean": 1025.9788442309662,
+        "std": 113.84224546591453,
+        "min": 0.344846159002002,
+        "max": 1440.0,
+        "median": 1009.0
+      },
+      "night_min_max": {
+        "mean": 611.6792767772046,
+        "std": 90.32939956097398,
+        "min": 0.0,
+        "max": 1300.0,
+        "median": 615.0
+      },
+      "sleep_min_max": {
+        "mean": 626.2677007463568,
+        "std": 84.84736182578622,
+        "min": 0.143394936383006,
+        "max": 1214.0,
+        "median": 617.0
+      },
+      "day_total_steps_no_el_median": {
+        "mean": 9005.901723114806,
+        "std": 3305.0665252679614,
+        "min": 0.0674437285930882,
+        "max": 24241.0,
+        "median": 8765.5
+      },
+      "day_min_median": {
+        "mean": 838.216471277092,
+        "std": 89.71895628131384,
+        "min": 0.306148097995177,
+        "max": 1082.0,
+        "median": 855.0
+      },
+      "night_min_median": {
+        "mean": 450.30817399395283,
+        "std": 112.39135033086903,
+        "min": 0.0,
+        "max": 656.0,
+        "median": 480.0
+      },
+      "sleep_min_median": {
+        "mean": 491.99579443908124,
+        "std": 65.26607725427445,
+        "min": 0.349273561921256,
+        "max": 736.0,
+        "median": 501.0
+      },
+      "day_total_steps_no_el_sd": {
+        "mean": 3970.333700647718,
+        "std": 1492.1533333717255,
+        "min": 0.0101843979663854,
+        "max": 11894.4198783963,
+        "median": 3752.74921527235
+      },
+      "day_min_sd": {
+        "mean": 178.1980451962637,
+        "std": 63.83817657422929,
+        "min": 0.136053538458442,
+        "max": 463.154941677189,
+        "median": 173.112432498981
+      },
+      "night_min_sd": {
+        "mean": 162.79015218906775,
+        "std": 51.29415896102386,
+        "min": 0.0,
+        "max": 370.847273146237,
+        "median": 161.039421379038
+      },
+      "sleep_min_sd": {
+        "mean": 94.76843332697686,
+        "std": 50.264682551047635,
+        "min": 0.00331072561427188,
+        "max": 436.2848839921,
+        "median": 83.5315192360486
+      },
+      "total_min_min": {
+        "mean": 551.78286284367,
+        "std": 229.2805387762922,
+        "min": 0.144710756982979,
+        "max": 1377.0,
+        "median": 529.0
+      },
+      "total_step_min": {
+        "mean": 2603.7936253473163,
+        "std": 2132.245508374436,
+        "min": 0.0,
+        "max": 17788.0,
+        "median": 2050.0
+      },
+      "total_ave_met_min": {
+        "mean": 1.3301406794711608,
+        "std": 0.17892641148705105,
+        "min": 0.1757107120741,
+        "max": 2.73,
+        "median": 1.31
+      },
+      "total_sedentary_min_min": {
+        "mean": 384.2166283631549,
+        "std": 166.5148062418852,
+        "min": 0.0372002775752703,
+        "max": 1108.0,
+        "median": 359.0
+      },
+      "total_min_max": {
+        "mean": 1420.9250745816576,
+        "std": 69.98394360924297,
+        "min": 1.14750048407141e-07,
+        "max": 1440.0,
+        "median": 1440.0
+      },
+      "total_step_max": {
+        "mean": 16418.472883878436,
+        "std": 5560.865422354532,
+        "min": 0.117059742360501,
+        "max": 40496.0,
+        "median": 15727.0
+      },
+      "total_ave_met_max": {
+        "mean": 2.2285723314743624,
+        "std": 0.39184966000859867,
+        "min": 0.00536340611348626,
+        "max": 4.36,
+        "median": 2.17
+      },
+      "total_sedentary_min_max": {
+        "mean": 1169.286105754301,
+        "std": 115.25928066001254,
+        "min": 0.262800095725877,
+        "max": 1440.0,
+        "median": 1183.0
+      },
+      "total_min_median": {
+        "mean": 1306.527743405672,
+        "std": 160.87913351160128,
+        "min": 0.237486795419985,
+        "max": 1440.0,
+        "median": 1368.0
+      },
+      "total_step_median": {
+        "mean": 8975.29095828701,
+        "std": 3292.7514625650847,
+        "min": 0.0618932814086805,
+        "max": 24241.0,
+        "median": 8751.0
+      },
+      "total_ave_met_median": {
+        "mean": 1.6952871018563762,
+        "std": 0.1998083313957622,
+        "min": 0.0193026825708165,
+        "max": 2.78,
+        "median": 1.675
+      },
+      "total_sedentary_min_median": {
+        "mean": 965.9209258708256,
+        "std": 150.09132908397333,
+        "min": 0.065357915575104,
+        "max": 1344.5,
+        "median": 999.0
+      },
+      "total_min_sd": {
+        "mean": 263.0072698679589,
+        "std": 93.5318535155396,
+        "min": 0.00264930134889971,
+        "max": 761.554003337912,
+        "median": 256.129053614117
+      },
+      "total_step_sd": {
+        "mean": 3980.291692322719,
+        "std": 1494.1962914318851,
+        "min": 0.0116873502786873,
+        "max": 11894.4198783963,
+        "median": 3754.17423427825
+      },
+      "total_ave_met_sd": {
+        "mean": 0.2545612374444401,
+        "std": 0.11047258096345904,
+        "min": 0.00707106781186548,
+        "max": 1.11448194242886,
+        "median": 0.23574602960854
+      },
+      "total_sedentary_min_sd": {
+        "mean": 224.24674800710665,
+        "std": 71.28846771393083,
+        "min": 0.005820720668425,
+        "max": 610.233152163991,
+        "median": 216.995391656136
+      }
+    }
+  },
+  "model_results": {
+    "Healthy Control_vs_ADHD Stimulant": {
+      "comparison": "Healthy Control_vs_ADHD Stimulant",
+      "group1": 0,
+      "group2": 2,
+      "n_features": 125,
+      "n_train": 7359,
+      "n_test": 3154,
+      "logistic_regression": {
+        "model": 

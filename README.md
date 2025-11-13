@@ -10,10 +10,10 @@ This document describes the exact flow orchestrated by main_pipeline.py.
 │                    PHASE 0: DATA LOADING                        │
 │                  (data_loader.py, config.py)                    │
 ├─────────────────────────────────────────────────────────────────┤
-│ 1. Load Fitbit Data (config.FITBIT_FILE)                      │
-│    - Read ONLY specified sheets (config.SHEETS_TO_LOAD):      │
+│ 1. Load Fitbit Data (config.FITBIT_FILE)                        │
+│    - Read ONLY specified sheets (config.SHEETS_TO_LOAD):        │
 │      'NC_Controls', 'ADHD_Unmedicated', 'ADHD_Stimulants'       │
-│    - Assign analysis_group (0, 1, 2) based on sheet name      │
+│    - Assign analysis_group (0, 1, 2) based on sheet name        │
 │    - Combine sheets into single DataFrame                       │
 │                                                                 │
 │ 2. Load Metadata (config.METADATA_FILE)                       │
